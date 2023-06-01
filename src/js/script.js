@@ -61,11 +61,13 @@ const select = {
   }
 
   const app = {
-    app.initMenu = {
+    initMenu: function () {
+      const thisApp = this;
+      console.log('thisApp.data', thisApp.data);
       const testProduct = new Product ();
       console.log('testProduct', testProduct);
     },
-    
+
     init: function(){
       const thisApp = this;
       console.log('*** App starting ***');
@@ -73,8 +75,20 @@ const select = {
       console.log('classNames:', classNames);
       console.log('settings:', settings);
       console.log('templates:', templates);
+
+      thisApp.initData();
       thisApp.initMenu();
     },
+  };
+
+  app.initData = { //hope its content is in right order
+    initData: function (){
+      const thisApp = this; //this point an object app I guess
+
+      thisApp.data = dataSource; //what is going on here?
+
+  }
+
   };
 
   app.init();
