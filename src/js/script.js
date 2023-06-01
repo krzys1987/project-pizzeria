@@ -76,7 +76,7 @@ const select = {
       console.log('settings:', settings);
       console.log('templates:', templates);
 
-      thisApp.initData();
+      //thisApp.initData(); //not a function error
       thisApp.initMenu();
     },
 
@@ -88,11 +88,13 @@ const select = {
     },
   };
 
-  const app.initData = function(){
+  const initData = function(){
     const thisApp = this;
     thisApp.data = dataSource;
 
   }
+
+  initData();
 
   app.init();
 
