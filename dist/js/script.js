@@ -70,16 +70,20 @@ const select = {
         console.log('settings:', settings);
         console.log('templates:', templates);
         this.initMenu();
+        this,this.initData();
+
 
       },
 
       initMenu: function () {
+        const thisApp = this;
+        console.log('thisAppdata', thisApp.data) //gtools says 'undefined', so if this is thisAppdata why don't work
         const testProduct = new Product ();
         console.log('testProduct', testProduct);
     },
 
       initData: function(){
-        console.log(dataSource);
+        console.log('served-meals', dataSource);
         thisApp.data = dataSource; //created a handy reference to dataSource at data.js
       },
 
