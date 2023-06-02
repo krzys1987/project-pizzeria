@@ -80,7 +80,7 @@ const select = {
         const thisApp = this;
         console.log('thisAppdata', thisApp.data) //gtools says 'undefined', so if this is thisAppdata why don't work
         for(let productData in thisApp.data.products){
-          new Product(productData, thisApp.data.products[productData];
+          new Product(productData, thisApp.data.products[productData]);
         }
         // const testProduct = new Product ();
         // console.log('testProduct', testProduct);
