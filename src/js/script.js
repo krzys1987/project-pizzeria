@@ -62,18 +62,9 @@ const select = {
 
     const app = {
 
-      init: function(){
-        const thisApp = this;
-        console.log('*** App starting ***');
-        console.log('thisApp:', thisApp);
-        console.log('classNames:', classNames);
-        console.log('settings:', settings);
-        console.log('templates:', templates);
-        this.initData();
-        this.initMenu();
-
-
-
+      initData: function(){
+        console.log('served-meals', dataSource);
+        thisApp.data = dataSource; //created a handy reference to dataSource at data.js
       },
 
       initMenu: function () {
@@ -86,12 +77,16 @@ const select = {
         // console.log('testProduct', testProduct);
     },
 
-      initData: function(){
-        console.log('served-meals', dataSource);
-        thisApp.data = dataSource; //created a handy reference to dataSource at data.js
-      },
-
-
+      init: function(){
+        const thisApp = this;
+        console.log('*** App starting ***');
+        console.log('thisApp:', thisApp);
+        console.log('classNames:', classNames);
+        console.log('settings:', settings);
+        console.log('templates:', templates);
+        this.initData();
+        this.initMenu();
+      }
 
       // initMenu: function () {
       //   const thisApp = this;
