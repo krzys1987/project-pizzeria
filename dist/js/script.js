@@ -67,7 +67,7 @@ const select = {
     },
 
       initData: function(){ //obsolete here?
-        console.log(dataSource); //argument dataSource is my imagination
+        console.log(dataSource); //argument dataSource is my imagination, however correct: data.js>dataSource
       },
 
       init: function(){
