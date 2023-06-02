@@ -61,14 +61,6 @@ const select = {
   }
 
     const app = {
-      initMenu: function () {
-        const testProduct = new Product ();
-        console.log('testProduct', testProduct);
-    },
-
-      initData: function(){ //obsolete here?
-        console.log(dataSource); //argument dataSource is my imagination, however correct: data.js>dataSource
-      },
 
       init: function(){
         const thisApp = this;
@@ -80,6 +72,18 @@ const select = {
         this.initMenu();
 
       },
+
+      initMenu: function () {
+        const testProduct = new Product ();
+        console.log('testProduct', testProduct);
+    },
+
+      initData: function(){
+        console.log(dataSource);
+        thisApp.data = dataSource; //created a handy reference to dataSource at data.js
+      },
+
+
 
       // initMenu: function () {
       //   const thisApp = this;
