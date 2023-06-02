@@ -60,43 +60,43 @@ const select = {
     }
   }
 
-  const app = {
-    // initMenu: function () {
-    //   const thisApp = this;
-    //   console.log('thisApp.data', thisApp.data);
-    //   const testProduct = new Product ();
-    //   console.log('testProduct', testProduct);
-    // },
-
-    init: function(){
-      const thisApp = this;
-      console.log('*** App starting ***');
-      console.log('thisApp:', thisApp);
-      console.log('classNames:', classNames);
-      console.log('settings:', settings);
-      console.log('templates:', templates);
-
-      //thisApp.initData(); //not a function error
-      thisApp.initMenu();
+    const app = {
+      initMenu: function () {
+        const testProduct = new Product ();
+        console.log('testProduct', testProduct);
     },
 
-    initMenu: function () {
-      const thisApp = this;
-      console.log('thisApp.data', thisApp.data);
-      const testProduct = new Product ();
-      console.log('testProduct', testProduct);
-    },
+      initData: function(){ //obsolete here?
+        console.log(dataSource); //argument dataSource is my imagination
+      },
+
+      init: function(){
+        const thisApp = this;
+        console.log('*** App starting ***');
+        console.log('thisApp:', thisApp);
+        console.log('classNames:', classNames);
+        console.log('settings:', settings);
+        console.log('templates:', templates);
+        this.initMenu();
+
+      },
+
+      // initMenu: function () {
+      //   const thisApp = this;
+      //   console.log('thisApp.data', thisApp.data);
+      //   const testProduct = new Product ();
+      //   console.log('testProduct', testProduct);
+      // },
+
+
   };
 
-  const initData = function(){
     const thisApp = this;
     thisApp.data = dataSource;
+    app.initData;
+    app.initMenu;
 
-  }
-
-  initData();
-
-  app.init();
+    app.init();
 
 
   }
