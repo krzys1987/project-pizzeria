@@ -63,6 +63,7 @@ const select = {
     const app = {
 
       initData: function(){
+        const thisApp = this;
         console.log('served-meals', dataSource);
         thisApp.data = dataSource; //created a handy reference to dataSource at data.js
       },
