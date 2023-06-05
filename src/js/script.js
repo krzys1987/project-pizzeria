@@ -74,6 +74,7 @@ const select = {
       //create a DOM element and save it as an attribute of the new-created instance
 
       /* find menu container */
+      const menuContainer = document.querySelector(select.containerOf.menu);
 
       /* add element to menu */
 
