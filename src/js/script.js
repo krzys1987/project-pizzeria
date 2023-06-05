@@ -74,8 +74,8 @@ const select = {
         for(let productData in thisApp.data.products){
           new Product(productData, thisApp.data.products[productData]);
         }
-        // const testProduct = new Product ();
-        // console.log('testProduct', testProduct);
+        const testProduct = new Product ();
+        console.log('testProduct', testProduct);
     },
 
       init: function(){
