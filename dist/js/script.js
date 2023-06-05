@@ -72,7 +72,7 @@ const select = {
         const thisApp = this;
         console.log('thisAppdata', thisApp.data) //[potencial problem] gtools show 5 new Product
         for(let productData in thisApp.data.products){ //loop iterates productData of all products
-          new Product(productData, thisApp.data.products[productData]);
+          new Product(productData, thisApp.data.products[productData]); //a new instance created, contains 2 argument: productData, profuctData of app.initMenu
         }
         const testProduct = new Product ();
         console.log('testProduct', testProduct);
