@@ -70,7 +70,7 @@ const select = {
 
       initMenu: function () {
         const thisApp = this;
-        console.log('thisAppdata', thisApp.data) //gtools says 'undefined', so if this is thisAppdata why don't work
+        console.log('thisAppdata', thisApp.data) //[potencial problem] gtools show 5 new Product
         for(let productData in thisApp.data.products){ //loop iterates productData of all products
           new Product(productData, thisApp.data.products[productData]);
         }
