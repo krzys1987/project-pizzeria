@@ -57,8 +57,22 @@ const select = {
       const thisProduct = this;
       this.id = id;
       this.data = data;
+      this.renderInMenu();
 
       console.log('new Product:', thisProduct);
+    }
+
+    renderInMenu(){
+      const thisProduct = this;
+
+      /* generate HTML based on template */
+
+      /* create element using utils.createElementFromHTML */
+
+      /* find menu container */
+
+      /* add element to menu */
+
     }
   }
 
