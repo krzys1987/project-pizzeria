@@ -70,6 +70,8 @@ const select = {
       //console.log('generateHTML' + templates.menuProduct(thisProduct.data));
 
       /* create element using utils.createElementFromHTML */
+      thisProduct.element = utils.createDOMFromHTML(generateHTML);
+      //create a DOM element and save it as an attribute of the new-created instance
 
       /* find menu container */
 
