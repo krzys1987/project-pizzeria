@@ -59,6 +59,8 @@ const select = {
       this.data = data;
       this.renderInMenu();
 
+
+
       console.log('new Product:', thisProduct);
     }
 
@@ -88,7 +90,7 @@ const select = {
     const thisApp = this;
     }
 
-    initAccordion();
+    initAccordion;
 
 
 
