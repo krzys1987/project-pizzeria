@@ -62,6 +62,10 @@ const select = {
       console.log('new Product:', thisProduct);
     }
 
+     /* [NEW] Accordeon add */
+    initAccordion: ;
+    const thisApp = this;
+
     renderInMenu(){
       const thisProduct = this;
 
@@ -80,6 +84,12 @@ const select = {
       menuContainer.appendChild(thisProduct.element);
 
     }
+
+    initAccordion();
+
+
+
+
   }
 
     const app = {
@@ -111,7 +121,7 @@ const select = {
         this.initMenu();
       }
 
-   
+
   };
 
     const thisApp = this;
