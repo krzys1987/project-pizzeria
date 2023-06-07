@@ -111,14 +111,7 @@ const select = {
         this.initMenu();
       }
 
-      // initMenu: function () {
-      //   const thisApp = this;
-      //   console.log('thisApp.data', thisApp.data);
-      //   const testProduct = new Product ();
-      //   console.log('testProduct', testProduct);
-      // },
-
-
+   
   };
 
     const thisApp = this;
