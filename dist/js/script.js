@@ -62,9 +62,7 @@ const select = {
       console.log('new Product:', thisProduct);
     }
 
-     /* [NEW] Accordeon add */
-    initAccordion: ;
-    const thisApp = this;
+
 
     renderInMenu(){
       const thisProduct = this;
@@ -83,6 +81,11 @@ const select = {
       /* add element to menu */
       menuContainer.appendChild(thisProduct.element);
 
+    }
+
+    /* [NEW] Accordeon add */
+    initAccordion(){
+    const thisApp = this;
     }
 
     initAccordion();
