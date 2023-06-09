@@ -85,7 +85,7 @@ const select = {
 
     }
 
-    /* [NEW] Accordeon add */
+    /* [NEW] Accordion add */
     initAccordion(){
     const thisApp = this;
     }
