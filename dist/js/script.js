@@ -1,5 +1,7 @@
 /* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
 
+const { active } = require("browser-sync");
+
 {
   'use strict';
 
@@ -88,38 +90,9 @@ const select = {
     /* [NEW] Accordion add */
     initAccordion(){
       const thisApp = this;
-
-      /* find the clickable trigger (the element that should react to clicking) */
-      const clickableTrigger = ???;
-
-      /* START: add event listener to clickable trigger on event click */
-      clickableTrigger.addEventListener('click', function(event) {
-        /* prevent default action for event */
-        preventDefault();
-
-        /* find active product (product that has active class) */
-        document.querySelectorAll('product.active');
-
-        /* if there is active product and it's not thisProduct.element, remove class active from it */
-
-        /* toggle active class on thisProduct.element */
-
-        });
-      }
-  }
-
-
-
-
-
     }
-
-    initAccordion;
-
-
-
-
   }
+
 
     const app = {
 
