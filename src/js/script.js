@@ -90,7 +90,7 @@ const select = {
       const thisApp = this;
 
       /* find the clickable trigger (the element that should react to clicking) */
-      const clickableTrigger = ???;
+      //const clickableTrigger = ???;
 
       /* START: add event listener to clickable trigger on event click */
       clickableTrigger.addEventListener('click', function(event) {
@@ -106,20 +106,11 @@ const select = {
 
         });
       }
-  }
-
-
-
-
+    }
 
     }
 
     initAccordion;
-
-
-
-
-  }
 
     const app = {
 
