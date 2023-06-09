@@ -111,7 +111,7 @@ const select = {
         for(let productData in thisApp.data.products){ //loop iterates productData of all products
           new Product(productData, thisApp.data.products[productData]); //a new instance created, contains 2 argument: productData (object properties), thisApp.data.products[productData] (object values)
         }
-        const testProduct = new Product ();
+        const testProduct = new Product (); //[potencial problem] create a new insance but why
         console.log('testProduct', testProduct);
     },
 
