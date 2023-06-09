@@ -90,7 +90,7 @@ const select = {
       const thisApp = this;
     }
 
-    initAccordion();
+    initAccordion;
 
 
 
