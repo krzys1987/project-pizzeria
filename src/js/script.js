@@ -87,10 +87,10 @@ const select = {
 
     /* [NEW] Accordion add */
     initAccordion(){
-    const thisApp = this;
+      const thisApp = this;
     }
 
-    initAccordion;
+    initAccordion();
 
 
 
