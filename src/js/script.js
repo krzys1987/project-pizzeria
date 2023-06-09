@@ -98,6 +98,7 @@ const select = {
         preventDefault();
 
         /* find active product (product that has active class) */
+        document.querySelectorAll('product.active');
 
         /* if there is active product and it's not thisProduct.element, remove class active from it */
 
