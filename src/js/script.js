@@ -85,12 +85,12 @@ const select = {
 
     }
 
-    /* [NEW] Accordion add */
-    initAccordion(){
-      const thisApp = this;
-    }
+    // /* [NEW] Accordion add */
+    // initAccordion(){
+    //   const thisApp = this;
+    // }
 
-    initAccordion;
+    // initAccordion;
 
 
 
