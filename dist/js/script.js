@@ -1,5 +1,7 @@
 /* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
 
+const { active } = require("browser-sync");
+
 {
   'use strict';
 
@@ -89,13 +91,8 @@ const select = {
     initAccordion(){
       const thisApp = this;
     }
-
-    initAccordion;
-
-
-
-
   }
+
 
     const app = {
 
