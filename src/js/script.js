@@ -1,6 +1,6 @@
 /* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
 
-const { active } = require("browser-sync");
+// const { active } = require("browser-sync");
 
 {
   'use strict';
@@ -9,85 +9,9 @@ const { active } = require("browser-sync");
     templateOf: {
       menuProduct: "#template-menu-product",
       },
-<<<<<<< HEAD
-    },
-  };
-
-  const classNames = {
-    menuProduct: {
-      wrapperActive: 'active',
-      imageVisible: 'active',
-    },
-  };
-
-  const settings = {
-    amountWidget: {
-      defaultValue: 1,
-      defaultMin: 1,
-      defaultMax: 9,
-    }
-  };
-
-  const templates = {
-    menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
-  };
-
-  class Product {
-    constructor(id, data){
-      const thisProduct = this;
-      this.id = id;
-      this.data = data;
-      this.renderInMenu();
-
-
-
-      console.log('new Product:', thisProduct);
-    }
-
-
-
-    renderInMenu(){
-      const thisProduct = this;
-
-      /* generate HTML based on template */
-      const generateHTML = templates.menuProduct(thisProduct.data);
-      //console.log('generateHTML' + templates.menuProduct(thisProduct.data));
-
-      /* create element using utils.createElementFromHTML */
-      thisProduct.element = utils.createDOMFromHTML(generateHTML);
-      //create a DOM element and save it as an attribute of the new-created instance
-
-      /* find menu container */
-      const menuContainer = document.querySelector(select.containerOf.menu);
-
-      /* add element to menu */
-      menuContainer.appendChild(thisProduct.element);
-
-    }
-
-    // /* [NEW] Accordion add */
-    // initAccordion(){
-    //   const thisApp = this;
-    // }
-
-    // initAccordion;
-
-
-
-
-  }
-
-    const app = {
-
-      initData: function(){
-        const thisApp = this;
-        console.log('served-meals', dataSource);
-        thisApp.data = dataSource; //created a handy reference to dataSource at data.js
-=======
       containerOf: {
         menu: '#product-list',
         cart: '#cart',
->>>>>>> 5d03423907e0eadecb963a4295c7011fea1e2d46
       },
       all: {
         menuProducts: '#product-list > .product',
@@ -184,18 +108,6 @@ const { active } = require("browser-sync");
     }
 
 
-
-
-
-    }
-
-    initAccordion;
-
-
-
-
-  }
-
     const app = {
 
         initData: function(){
@@ -234,6 +146,5 @@ const { active } = require("browser-sync");
       app.initMenu;
 
       app.init();
-
 
   }
