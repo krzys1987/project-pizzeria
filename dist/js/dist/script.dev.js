@@ -8,9 +8,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 /* global Handlebars, utils, dataSource */
 // eslint-disable-line no-unused-vars
-var _require = require("browser-sync"),
-    active = _require.active;
-
+// const { active } = require("browser-sync");
 {
   'use strict';
 
@@ -70,6 +68,8 @@ var _require = require("browser-sync"),
       this.id = id;
       this.data = data;
       this.renderInMenu();
+      this.initAccordion();
+      console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
     }
 
@@ -92,12 +92,31 @@ var _require = require("browser-sync"),
 
         menuContainer.appendChild(thisProduct.element);
       }
-      /* [NEW] Accordion add */
-
     }, {
       key: "initAccordion",
       value: function initAccordion() {
-        var thisApp = this;
+        var thisProduct = this;
+        /* find the clickable trigger (the element that should react to clicking) */
+
+        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+        /* START: add event listener to clickable trigger on event click */
+
+        clickableTrigger.addEventListener('click', function (event) {
+          /* prevent default action for event */
+          event.preventDefault();
+          /* find active product (product that has active class) */
+          // const hasActiveClass = clickableTrigger.classList.contains('active');
+
+          /* if there is active product and it's not thisProduct.element, remove class active from it */
+          // if (hasActiveClass) {
+          //   clickableTrigger.classList.add('active')
+          // } else {
+          //   clickableTrigger.classList.remove('active')
+          // }
+
+          clickableTrigger.classList.toggle('active');
+          /* toggle active class on thisProduct.element */
+        });
       }
     }]);
 
@@ -117,11 +136,9 @@ var _require = require("browser-sync"),
       for (var productData in thisApp.data.products) {
         //loop iterates productData of all products
         new Product(productData, thisApp.data.products[productData]); //a new instance created, contains 2 argument: productData (object properties), thisApp.data.products[productData] (object values)
-      }
+      } // const testProduct = new Product (); //[potencial problem] create a new insance but why
+      // console.log('testProduct', testProduct);
 
-      var testProduct = new Product(); //[potencial problem] create a new insance but why
-
-      console.log('testProduct', testProduct);
     },
     init: function init() {
       var thisApp = this;
