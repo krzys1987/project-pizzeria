@@ -92,6 +92,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         menuContainer.appendChild(thisProduct.element);
       }
+      /* find elements in Product container */
+
     }, {
       key: "getElements",
       value: function getElements() {

@@ -87,6 +87,7 @@
 
       }
 
+      /* find elements in Product container */
       getElements(){
         const thisProduct = this;
 
