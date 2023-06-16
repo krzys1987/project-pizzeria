@@ -93,6 +93,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         menuContainer.appendChild(thisProduct.element);
       }
     }, {
+      key: "getElements",
+      value: function getElements() {
+        var thisProduct = this;
+        thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+        thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
+        thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
+        thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
+        thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+      }
+    }, {
       key: "initAccordion",
       value: function initAccordion() {
         var thisProduct = this;
