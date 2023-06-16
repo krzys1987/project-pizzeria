@@ -60,6 +60,7 @@
         this.id = id;
         this.data = data;
         this.renderInMenu();
+        this.getElements();
         this.initAccordion();
        console.log('PRODUCT', this)
 

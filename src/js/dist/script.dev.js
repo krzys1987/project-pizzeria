@@ -68,6 +68,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.id = id;
       this.data = data;
       this.renderInMenu();
+      this.getElements();
       this.initAccordion();
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
