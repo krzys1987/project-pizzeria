@@ -103,8 +103,8 @@
         const thisProduct = this;
 
       /* find the clickable trigger (the element that should react to clicking) */
-        // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
-        thisProduct.accordionTrigger();
+        const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+        //thisProduct.accordionTrigger();
 
         /* START: add event listener to clickable trigger on event click */
         clickableTrigger.addEventListener('click', function(event) {

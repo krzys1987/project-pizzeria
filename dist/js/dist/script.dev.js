@@ -111,7 +111,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         /* find the clickable trigger (the element that should react to clicking) */
 
-        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //thisProduct.accordionTrigger();
+
         /* START: add event listener to clickable trigger on event click */
 
         clickableTrigger.addEventListener('click', function (event) {
