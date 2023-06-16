@@ -117,7 +117,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           clickableTrigger.classList.toggle('active');
           /* toggle active class on thisProduct.element */
 
-          thisProduct.element.classList.toggle('actice');
+          thisProduct.element.classList.toggle('active'); //it works, toggle class 'active' to clicked products
         });
       }
     }]);
