@@ -99,15 +99,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       key: "getElements",
       value: function getElements() {
         var thisProduct = this;
-        console.log('###' + 'select.menuProduct.clickable' + '###' + select.menuProduct.clickable);
+        console.log('###' + 'select.menuProduct.clickable' + '###' + 'code is:' + select.menuProduct.clickable);
         thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
-        console.log('###' + 'select.menuProduct.amountWidget.form' + '###' + select.menuProduct.amountWidget.form);
+        console.log('###' + 'select.menuProduct.amountWidget.form' + '###' + 'code is:' + select.menuProduct.amountWidget.form);
         thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
-        console.log('###' + 'select.all.formInputs' + '###' + select.all.formInputs);
+        console.log('###' + 'select.all.formInputs' + '###' + 'code is:' + select.all.formInputs);
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
-        console.log('###' + 'select.menuProduct.cartButton' + '###' + select.menuProduct.cartButton);
+        console.log('###' + 'select.menuProduct.cartButton' + '###' + 'code is:' + select.menuProduct.cartButton);
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
-        console.log('###' + 'select.menuProduct.priceElem' + '###' + select.menuProduct.priceElem);
+        console.log('###' + 'select.menuProduct.priceElem' + '###' + 'code is:' + select.menuProduct.priceElem);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
       }
     }, {
