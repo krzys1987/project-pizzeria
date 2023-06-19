@@ -112,8 +112,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         /* find the clickable trigger (the element that should react to clicking) */
         // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
 
-        thisProduct.accordionTrigger.addEventListener('click', function (event) {});
+        thisProduct.accordionTrigger.addEventListener('click', function (event) {
+          thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+        });
+        /* initOrderForm */
+
+        var initOrderForm = function initOrderForm() {
+          var thisProduct = this;
+        };
+
+        var processOrder = function processOrder() {
+          var thisProduct = this;
+        };
         /* START: add event listener to clickable trigger on event click */
+
 
         clickableTrigger.addEventListener('click', function (event) {
           /* prevent default action for event */
