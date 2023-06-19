@@ -119,10 +119,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         var initOrderForm = function initOrderForm() {
           var thisProduct = this;
+          console.log('###methood name' + initOrderForm);
         };
 
         var processOrder = function processOrder() {
           var thisProduct = this;
+          console.log('###methood name' + processOrder);
         };
         /* START: add event listener to clickable trigger on event click */
 

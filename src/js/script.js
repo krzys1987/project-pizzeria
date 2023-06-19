@@ -112,11 +112,13 @@
         /* initOrderForm */
         const initOrderForm = function (){
           const thisProduct = this;
+          console.log('###methood name'+initOrderForm);
 
         }
 
         const processOrder = function (){
           const thisProduct = this;
+          console.log('###methood name'+processOrder);
 
         }
 
