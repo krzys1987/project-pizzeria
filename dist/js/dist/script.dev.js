@@ -69,8 +69,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.data = data;
       this.renderInMenu();
       this.getElements();
-      this.initAccordion();
-      this.initOrderForm();
+      this.initAccordion(); // this.initOrderForm();
+
       this.processOrder();
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
@@ -117,24 +117,58 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: function initAccordion() {
         var thisProduct = this;
         /* find the clickable trigger (the element that should react to clicking) */
-        // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+
+        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
 
         thisProduct.accordionTrigger.addEventListener('click', function (event) {
           thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+          /* initOrderForm */
+
+          var initOrderForm = function initOrderForm() {
+            var thisProduct = this;
+            console.log('###methood name' + initOrderForm);
+          };
+
+          var processOrder = function processOrder() {
+            var thisProduct = this;
+            console.log('###methood name' + processOrder);
+          };
         });
-        /* initOrderForm */
+        thisProduct.form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          thisProduct.processOrder();
+        });
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
 
-        var initOrderForm = function initOrderForm() {
-          var thisProduct = this;
-          console.log('###methood name' + initOrderForm);
-        };
+        try {
+          for (var _iterator = thisProduct.formInputs[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var input = _step.value;
+            input.addEventListener('change', function () {
+              thisProduct.processOrder();
+            });
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
 
-        var processOrder = function processOrder() {
-          var thisProduct = this;
-          console.log('###methood name' + processOrder);
-        };
+        thisProduct.cartButton.addEventListener('click', function (event) {
+          event.preventDefault();
+          thisProduct.processOrder();
+        });
         /* START: add event listener to clickable trigger on event click */
-
 
         clickableTrigger.addEventListener('click', function (event) {
           /* prevent default action for event */

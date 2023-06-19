@@ -62,7 +62,7 @@
         this.renderInMenu();
         this.getElements();
         this.initAccordion();
-        this.initOrderForm();
+        // this.initOrderForm();
         this.processOrder();
        console.log('PRODUCT', this)
 
@@ -110,11 +110,12 @@
         const thisProduct = this;
 
       /* find the clickable trigger (the element that should react to clicking) */
-        // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+        const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
         thisProduct.accordionTrigger.addEventListener('click', function(event){
           thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
 
-        });
+
+
 
         /* initOrderForm */
         const initOrderForm = function (){
@@ -128,7 +129,23 @@
           console.log('###methood name'+processOrder);
 
         }
+      });
 
+      thisProduct.form.addEventListener('submit', function(event){
+        event.preventDefault();
+        thisProduct.processOrder();
+      });
+
+      for(let input of thisProduct.formInputs){
+        input.addEventListener('change', function(){
+          thisProduct.processOrder();
+        });
+      }
+
+      thisProduct.cartButton.addEventListener('click', function(event){
+        event.preventDefault();
+        thisProduct.processOrder();
+      });
 
 
         /* START: add event listener to clickable trigger on event click */
