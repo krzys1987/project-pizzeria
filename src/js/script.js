@@ -92,10 +92,15 @@
       getElements(){
         const thisProduct = this;
 
+        console.log('###'+'select.menuProduct.clickable'+'###'+ select.menuProduct.clickable);
         thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+        console.log('###'+'select.menuProduct.amountWidget.form'+'###'+select.menuProduct.amountWidget.form);
         thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
+        console.log('###'+'select.all.formInputs'+'###'+select.all.formInputs);
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
+        console.log('###'+'select.menuProduct.cartButton'+'###'+select.menuProduct.cartButton);
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
+        console.log('###'+'select.menuProduct.priceElem'+'###'+select.menuProduct.priceElem);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
       }
 
