@@ -63,7 +63,7 @@
         this.getElements();
         this.initAccordion();
         // this.initOrderForm();
-        this.processOrder();
+        //this.processOrder();
        console.log('PRODUCT', this)
 
 
