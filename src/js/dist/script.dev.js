@@ -119,11 +119,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         /* find the clickable trigger (the element that should react to clicking) */
 
         var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+        // select.getElements.thisProduct.accordionTrigger;
 
         thisProduct.accordionTrigger.addEventListener('click', function (event) {
-          thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
-          /* initOrderForm */
-
+          /* FormActionPrepare */
           var initOrderForm = function initOrderForm() {
             var thisProduct = this;
             console.log('###methood name' + initOrderForm);

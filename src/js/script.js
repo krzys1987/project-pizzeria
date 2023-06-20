@@ -109,15 +109,14 @@
       initAccordion(){
         const thisProduct = this;
 
-      /* find the clickable trigger (the element that should react to clicking) */
+        /* find the clickable trigger (the element that should react to clicking) */
         const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
-        thisProduct.accordionTrigger.addEventListener('click', function(event){
-          thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+        // select.getElements.thisProduct.accordionTrigger;
 
 
+        thisProduct.accordionTrigger.addEventListener('click', function(event) {
 
-
-        /* initOrderForm */
+        /* FormActionPrepare */
         const initOrderForm = function (){
           const thisProduct = this;
           console.log('###methood name'+initOrderForm);
