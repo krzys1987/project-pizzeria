@@ -113,6 +113,7 @@
         const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
 
         /* select menu products */
+        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
         thisProduct.accordionTrigger.addEventListener('click', function(event) {
 
         /* FormActionPrepare */

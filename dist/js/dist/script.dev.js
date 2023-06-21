@@ -122,6 +122,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         /* select menu products */
 
+        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
         thisProduct.accordionTrigger.addEventListener('click', function (event) {
           /* FormActionPrepare */
           var initOrderForm = function initOrderForm() {
