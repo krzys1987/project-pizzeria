@@ -81,6 +81,40 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: function initOrderForm() {
         var thisProduct = this;
         console.log('initOrderForm');
+        thisProduct.form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          thisProduct.processOrder();
+        });
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = thisProduct.formInputs[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var input = _step.value;
+            input.addEventListener('change', function () {
+              thisProduct.processOrder();
+            });
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+
+        thisProduct.cartButton.addEventListener('click', function (event) {
+          event.preventDefault();
+          thisProduct.processOrder();
+        });
       }
     }, {
       key: "processOrder",
@@ -146,40 +180,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var thisProduct = this;
             console.log('###methood name' + processOrder);
           };
-        });
-        thisProduct.form.addEventListener('submit', function (event) {
-          event.preventDefault();
-          thisProduct.processOrder();
-        });
-        var _iteratorNormalCompletion = true;
-        var _didIteratorError = false;
-        var _iteratorError = undefined;
-
-        try {
-          for (var _iterator = thisProduct.formInputs[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var input = _step.value;
-            input.addEventListener('change', function () {
-              thisProduct.processOrder();
-            });
-          }
-        } catch (err) {
-          _didIteratorError = true;
-          _iteratorError = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-              _iterator["return"]();
-            }
-          } finally {
-            if (_didIteratorError) {
-              throw _iteratorError;
-            }
-          }
-        }
-
-        thisProduct.cartButton.addEventListener('click', function (event) {
-          event.preventDefault();
-          thisProduct.processOrder();
         });
         /* console.log on "select" object */
 
