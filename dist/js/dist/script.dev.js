@@ -120,9 +120,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       key: "processOrder",
       value: function processOrder() {
         var thisProduct = this;
-        console.log('processOrder');
+        console.log('processOrder'); // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
+
         var formData = utils.serializeFormToObject(thisProduct.form);
-        console.log('###formData###', formData);
+        console.log('###formData###', formData); //a loop throw every of general category (param)
+
+        for (var paramId in thisProduct.data.params) {
+          //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
+          var param = thisProduct.data.params[paramId];
+          console.log('paramId, param', param, paramId); //a loop within every product opions in chosen category
+
+          for (var optionId in param.options) {
+            //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
+            var option = param.options[optionId];
+            console.log('option, optrionId :', option, optionId);
+          }
+        } //update calculated price in the HTML
+
+
+        thisProduct.priceElem.innerHTML = price; //set price to default price --> its value might change, depended on chosen paramId and optionId
+
+        var price = thisProduct.data.price;
       }
     }, {
       key: "renderInMenu",
