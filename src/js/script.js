@@ -62,8 +62,8 @@
         this.renderInMenu();
         this.getElements();
         this.initAccordion();
-        // this.initOrderForm();
-        //this.processOrder();
+        this.initOrderForm();
+        this.processOrder();
        console.log('PRODUCT', this)
 
 

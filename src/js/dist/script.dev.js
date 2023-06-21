@@ -69,9 +69,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.data = data;
       this.renderInMenu();
       this.getElements();
-      this.initAccordion(); // this.initOrderForm();
-      //this.processOrder();
-
+      this.initAccordion();
+      this.initOrderForm();
+      this.processOrder();
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
     }
