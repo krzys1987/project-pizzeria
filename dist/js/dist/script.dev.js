@@ -121,6 +121,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: function processOrder() {
         var thisProduct = this;
         console.log('processOrder');
+        var formData = utils.serializeFormToObject(thisProduct.form);
+        console.log('###formData###', formData);
       }
     }, {
       key: "renderInMenu",
