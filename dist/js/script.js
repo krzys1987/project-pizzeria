@@ -113,7 +113,7 @@
         console.log('###'+'select.menuProduct.cartButton'+'###'+'code is:' +select.menuProduct.cartButton);
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
         console.log('###'+'select.menuProduct.priceElem'+'###'+'code is:' +select.menuProduct.priceElem);
-        thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+        thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
       }
 
       initAccordion(){
