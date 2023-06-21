@@ -118,11 +118,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         /* find the clickable trigger (the element that should react to clicking) */
 
+        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
         var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
 
         /* select menu products */
 
-        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
         thisProduct.accordionTrigger.addEventListener('click', function (event) {
           /* FormActionPrepare */
           var initOrderForm = function initOrderForm() {
@@ -169,6 +169,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           event.preventDefault();
           thisProduct.processOrder();
         });
+        /* console.log on "select" object */
+
+        console.log('###SELECT-OBJECT TESTING###', document.querySelector(select.templateOf.menuProduct));
         /* START: add event listener to clickable trigger on event click */
 
         clickableTrigger.addEventListener('click', function (event) {

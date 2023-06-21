@@ -146,6 +146,10 @@
         thisProduct.processOrder();
       });
 
+      /* console.log on "select" object */
+      console.log('###SELECT-OBJECT TESTING###', document.querySelector(select.templateOf.menuProduct));
+
+
 
         /* START: add event listener to clickable trigger on event click */
         clickableTrigger.addEventListener('click', function(event) {
