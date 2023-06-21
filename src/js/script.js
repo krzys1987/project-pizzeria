@@ -99,9 +99,6 @@
         const formData = utils.serializeFormToObject(thisProduct.form);
         console.log('###formData###', formData);
 
-        //set price to default price
-        let price = thisProduct.data.price;
-
         //a loop throw every of general category (param)
         for(let paramId in thisProduct.data.params){
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
@@ -119,7 +116,11 @@
 
         //update calculated price in the HTML
         thisProduct.priceElem.innerHTML = price;
-        
+
+        //set price to default price
+        let price = thisProduct.data.price;
+
+
 
       }
 

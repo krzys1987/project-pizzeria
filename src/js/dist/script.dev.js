@@ -123,9 +123,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         console.log('processOrder'); // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
 
         var formData = utils.serializeFormToObject(thisProduct.form);
-        console.log('###formData###', formData); //set price to default price
-
-        var price = thisProduct.data.price; //a loop throw every of general category (param)
+        console.log('###formData###', formData); //a loop throw every of general category (param)
 
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
@@ -140,7 +138,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } //update calculated price in the HTML
 
 
-        thisProduct.priceElem.innerHTML = price;
+        thisProduct.priceElem.innerHTML = price; //set price to default price
+
+        var price = thisProduct.data.price;
       }
     }, {
       key: "renderInMenu",
