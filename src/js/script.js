@@ -117,7 +117,9 @@
           }
         }
 
-        
+        //update calculated price in the HTML
+        thisProduct.priceElem.innerHTML = price;
+
 
 
 

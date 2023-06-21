@@ -137,7 +137,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var option = param.options[optionId];
             console.log('option, optrionId :', option, optionId);
           }
-        }
+        } //update calculated price in the HTML
+
+
+        thisProduct.priceElem.innerHTML = price;
       }
     }, {
       key: "renderInMenu",
