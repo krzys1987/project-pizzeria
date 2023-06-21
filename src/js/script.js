@@ -117,8 +117,10 @@
         //update calculated price in the HTML
         thisProduct.priceElem.innerHTML = price;
 
-        //set price to default price
+        //set price to default price --> its value is depended on chosen paramId and optionId
         let price = thisProduct.data.price;
+
+        
 
 
 
