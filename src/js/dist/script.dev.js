@@ -77,6 +77,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }
 
     _createClass(Product, [{
+      key: "initOrderForm",
+      value: function initOrderForm() {
+        var thisProduct = this;
+        console.log('initOrderForm');
+      }
+    }, {
+      key: "processOrder",
+      value: function processOrder() {
+        var thisProduct = this;
+        console.log('processOrder');
+      }
+    }, {
       key: "renderInMenu",
       value: function renderInMenu() {
         var thisProduct = this;
@@ -111,6 +123,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
         console.log('###' + 'select.menuProduct.priceElem' + '###' + 'code is:' + select.menuProduct.priceElem);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+        git;
       }
     }, {
       key: "initAccordion",

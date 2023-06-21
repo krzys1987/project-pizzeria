@@ -71,6 +71,16 @@
         console.log('new Product:', thisProduct);
       }
 
+      initOrderForm(){
+        const thisProduct = this;
+        console.log('initOrderForm');
+      }
+
+      processOrder(){
+        const thisProduct = this;
+        console.log('processOrder');
+      }
+
       renderInMenu(){
         const thisProduct = this;
 
