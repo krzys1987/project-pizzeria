@@ -116,7 +116,7 @@
 
         //update calculated price in the HTML
         thisProduct.priceElem.innerHTML = price;
-        console.log('###priceElem'+this.priceElem);
+        console.log('###priceElem', this.priceElem);
         console.log('##AAA#'+thisProduct+ '###AAA');
 
         //set price to default price --> its value might change, depended on chosen paramId and optionId

@@ -139,7 +139,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
         thisProduct.priceElem.innerHTML = price;
-        console.log('###priceElem' + this.priceElem);
+        console.log('###priceElem', this.priceElem);
         console.log('##AAA#' + thisProduct + '###AAA'); //set price to default price --> its value might change, depended on chosen paramId and optionId
 
         var price = thisProduct.data.price;
