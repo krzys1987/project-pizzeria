@@ -69,9 +69,6 @@
         this.processOrder();
 
        console.log('PRODUCT', this)
-
-
-
         console.log('new Product:', thisProduct);
       }
 
@@ -119,13 +116,8 @@
         }
 
         //update calculated price in the HTML
-        
-        // console.log('###'+'select.menuProduct.priceElem'+'###'+'code is:' +select.menuProduct.priceElem);
-        // thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
-
-        //[problem]where is null?
-
-        console.log(thisProduct); //priceElem is a null -->what to do to solve an issue?
+        console.log(thisProduct); //priceElem is a null --> try to point it before to solbe an issue
+        const priceElem = product_params.querySelector(price);
 
         thisProduct.priceElem.innerHTML = price;
         console.log('###priceElem', this.priceElem);
