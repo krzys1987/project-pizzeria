@@ -5,6 +5,9 @@
 {
   'use strict';
 
+  // console.log('###'+'select.menuProduct.priceElem'+'###'+'code is:' +select.menuProduct.priceElem);
+  // thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
+
   const select = {
     templateOf: {
       menuProduct: "#template-menu-product",
@@ -64,6 +67,7 @@
         this.initAccordion();
         this.initOrderForm();
         this.processOrder();
+
        console.log('PRODUCT', this)
 
 
@@ -115,6 +119,14 @@
         }
 
         //update calculated price in the HTML
+        
+        // console.log('###'+'select.menuProduct.priceElem'+'###'+'code is:' +select.menuProduct.priceElem);
+        // thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
+
+        //[problem]where is null?
+
+        console.log(thisProduct); //priceElem is a null -->what to do to solve an issue?
+
         thisProduct.priceElem.innerHTML = price;
         console.log('###priceElem', this.priceElem);
         console.log('##AAA#'+thisProduct, '###AAA');

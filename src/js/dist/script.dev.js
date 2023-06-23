@@ -10,7 +10,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 // eslint-disable-line no-unused-vars
 // const { active } = require("browser-sync");
 {
-  'use strict';
+  'use strict'; // console.log('###'+'select.menuProduct.priceElem'+'###'+'code is:' +select.menuProduct.priceElem);
+  // thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
+
 
   var select = {
     templateOf: {
@@ -136,7 +138,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             console.log('option, optrionId :', option, optionId);
           }
         } //update calculated price in the HTML
+        // console.log('###'+'select.menuProduct.priceElem'+'###'+'code is:' +select.menuProduct.priceElem);
+        // thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
+        //[problem]where is null?
 
+
+        console.log(thisProduct); //priceElem is a null -->what to do to solve an issue?
 
         thisProduct.priceElem.innerHTML = price;
         console.log('###priceElem', this.priceElem);
