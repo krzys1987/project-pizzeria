@@ -138,16 +138,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             console.log('option, optrionId :', option, optionId);
           }
         } //update calculated price in the HTML
+        //show all classes of thisProduct
 
 
-        console.log(thisProduct); //priceElem is a null --> try to point it before to solbe an issue
+        console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
 
-        var priceElem = product_params.querySelector(price);
-        thisProduct.priceElem.innerHTML = price;
-        console.log('###priceElem', this.priceElem);
-        console.log('##AAA#' + thisProduct, '###AAA'); //set price to default price --> its value might change, depended on chosen paramId and optionId
+        console.log('thisProduct price', thisProduct.element.querySelector(select.menuProduct.priceElem)); //always show 9
 
-        var price = thisProduct.data.price;
+        var yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem); //put chosen products prices to HTML
+
+        var priceHTML = yourChosenproducts.innerHTML; //set a price variable
+
+        var price = thisProduct.data.price; //set price to default price --> its value might change, depended on chosen paramId and optionId
       }
     }, {
       key: "renderInMenu",

@@ -116,15 +116,23 @@
         }
 
         //update calculated price in the HTML
-        console.log(thisProduct); //priceElem is a null --> try to point it before to solbe an issue
-        const priceElem = product_params.querySelector(price);
 
-        thisProduct.priceElem.innerHTML = price;
-        console.log('###priceElem', this.priceElem);
-        console.log('##AAA#'+thisProduct, '###AAA');
+        //show all classes of thisProduct
+        console.log('thisProduct classes', thisProduct);
+
+        //pick a value from thisProduct classes
+        console.log('thisProduct price', thisProduct.element.querySelector(select.menuProduct.priceElem)); //always show 9
+        const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
+
+        //put chosen products prices to HTML
+        const priceHTML = yourChosenproducts.innerHTML;
+
+        //set a price variable
+        let price = thisProduct.data.price;
+
 
         //set price to default price --> its value might change, depended on chosen paramId and optionId
-        let price = thisProduct.data.price;
+
 
 
       }
