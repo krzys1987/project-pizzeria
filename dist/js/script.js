@@ -66,7 +66,7 @@
         this.getElements();
         this.initAccordion();
         this.initOrderForm();
-        this.processOrder();
+        // this.processOrder(); //amend nessesary --> error disappearing other products
 
        console.log('PRODUCT', this)
         console.log('new Product:', thisProduct);
@@ -113,7 +113,7 @@
             console.log('option, optrionId :', option, optionId);
 
           }
-        }
+        }x``
 
         //update calculated price in the HTML
 

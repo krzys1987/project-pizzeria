@@ -1,5 +1,17 @@
 "use strict";
 
+function _templateObject() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -72,8 +84,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.renderInMenu();
       this.getElements();
       this.initAccordion();
-      this.initOrderForm();
-      this.processOrder();
+      this.initOrderForm(); // this.processOrder(); //amend nessesary --> error disappearing other products
+
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
     }
@@ -137,9 +149,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var option = param.options[optionId];
             console.log('option, optrionId :', option, optionId);
           }
-        } //update calculated price in the HTML
-        //show all classes of thisProduct
+        }
 
+        x(_templateObject()); //update calculated price in the HTML
+        //show all classes of thisProduct
 
         console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
 
