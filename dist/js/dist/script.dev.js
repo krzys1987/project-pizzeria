@@ -201,17 +201,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         /* select menu products */
 
-        thisProduct.accordionTrigger.addEventListener('click', function (event) {
-          /* FormActionPrepare */
-          var initOrderForm = function initOrderForm() {
-            var thisProduct = this;
-            console.log('###methood name' + initOrderForm);
-          };
-
-          var processOrder = function processOrder() {
-            var thisProduct = this;
-            console.log('###methood name' + processOrder);
-          };
+        thisProduct.accordionTrigger.addEventListener('click', function (event) {// /* CANNOT MOVE THESE TWO FUNCTION BELLOW --> ERROR BUT WE WILL SEE  */
+          // const initOrderForm = function (){
+          //   const thisProduct = this;
+          //   console.log('###methood name'+initOrderForm);
+          // }
+          // const processOrder = function (){
+          //   const thisProduct = this;
+          //   console.log('###methood name'+processOrder);
+          // }
         });
         /* console.log on "select" object */
 

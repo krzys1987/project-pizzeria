@@ -182,18 +182,18 @@
         /* select menu products */
         thisProduct.accordionTrigger.addEventListener('click', function(event) {
 
-        /* FormActionPrepare */
-        const initOrderForm = function (){
-          const thisProduct = this;
-          console.log('###methood name'+initOrderForm);
+        // /* CANNOT MOVE THESE TWO FUNCTION BELLOW --> ERROR BUT WE WILL SEE  */
+        // const initOrderForm = function (){
+        //   const thisProduct = this;
+        //   console.log('###methood name'+initOrderForm);
 
-        }
+        // }
 
-        const processOrder = function (){
-          const thisProduct = this;
-          console.log('###methood name'+processOrder);
+        // const processOrder = function (){
+        //   const thisProduct = this;
+        //   console.log('###methood name'+processOrder);
 
-        }
+        // }
       });
 
 
