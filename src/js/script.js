@@ -113,7 +113,7 @@
             console.log('option, optrionId :', option, optionId);
 
           }
-        }x``
+        }
 
         //update calculated price in the HTML
 
