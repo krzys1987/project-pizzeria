@@ -72,7 +72,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.renderInMenu();
       this.getElements();
       this.initAccordion();
-      this.initOrderForm(); // this.processOrder(); //amend nessesary --> error disappearing other products
+      this.initOrderForm();
+      this.processOrder(); //amend nessesary --> error disappearing other products
 
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
@@ -138,8 +139,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             console.log('option, optrionId :', option, optionId);
           }
         } //update calculated price in the HTML
-        //show all classes of thisProduct
 
+
+        debugger; //show all classes of thisProduct
 
         console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
 
@@ -193,9 +195,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         /* find the clickable trigger (the element that should react to clicking) */
 
-        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
-        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products'); // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
 
+        Products.getElements.thisProduct.accordionTrigger;
         /* select menu products */
 
         thisProduct.accordionTrigger.addEventListener('click', function (event) {

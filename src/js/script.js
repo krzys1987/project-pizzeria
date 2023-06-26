@@ -66,7 +66,7 @@
         this.getElements();
         this.initAccordion();
         this.initOrderForm();
-        // this.processOrder(); //amend nessesary --> error disappearing other products
+        this.processOrder(); //amend nessesary --> error disappearing other products
 
        console.log('PRODUCT', this)
         console.log('new Product:', thisProduct);
@@ -116,7 +116,7 @@
         }
 
         //update calculated price in the HTML
-
+        debugger;
         //show all classes of thisProduct
         console.log('thisProduct classes', thisProduct);
 
@@ -177,8 +177,8 @@
 
         /* find the clickable trigger (the element that should react to clicking) */
         console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
-        const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
-
+        // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+        Products.getElements.thisProduct.accordionTrigger;
         /* select menu products */
         thisProduct.accordionTrigger.addEventListener('click', function(event) {
 
