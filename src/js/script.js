@@ -177,8 +177,8 @@
 
         /* find the clickable trigger (the element that should react to clicking) */
         console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
-        // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
-        Products.getElements.thisProduct.accordionTrigger;
+        const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+        // select.Product.getElements.thisProduct.accordionTrigger;
         /* select menu products */
         thisProduct.accordionTrigger.addEventListener('click', function(event) {
 

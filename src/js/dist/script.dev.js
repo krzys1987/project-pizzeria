@@ -195,9 +195,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         /* find the clickable trigger (the element that should react to clicking) */
 
-        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products'); // const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
+        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
+        // select.Product.getElements.thisProduct.accordionTrigger;
 
-        Products.getElements.thisProduct.accordionTrigger;
         /* select menu products */
 
         thisProduct.accordionTrigger.addEventListener('click', function (event) {
