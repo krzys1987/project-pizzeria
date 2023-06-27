@@ -130,22 +130,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         console.log('processOrder'); // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
 
         var formData = utils.serializeFormToObject(thisProduct.form);
-        console.log('###formData###', formData); //a loop throw every of general category (param)
+        console.log('###formData###', formData); // set price to default price
+
+        var price = thisProduct.data.price; //a loop throw every of general category (param)
 
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           var param = thisProduct.data.params[paramId];
-          console.log('paramId, param', param, paramId); //a loop within every product opions in chosen category
+          console.log('paramId, param', param, paramId);
+          console.log('### NOTE ### FIX IT: paramId should be compared to default and +/- from its value'); //a loop within every product opions in chosen category
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
             console.log('option, optrionId :', option, optionId);
+            console.log('### NOTE ### paramId should be compared to default and +/- from its value');
           }
         } //update calculated price in the HTML
-        // debugger;
-        //show all classes of thisProduct
 
+
+        thisProduct.priceElem.innerHTML = price; // debugger;
+        //show all classes of thisProduct
 
         console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
 
@@ -153,9 +158,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         var yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem); //put chosen products prices to HTML
 
-        var priceHTML = yourChosenproducts.innerHTML; //set a price variable
-
-        var price = thisProduct.data.price; //set price to default price --> its value might change, depended on chosen paramId and optionId
+        var priceHTML = yourChosenproducts.innerHTML; // //set a price variable
+        // let price = thisProduct.data.price;
+        //set price to default price --> its value might change, depended on chosen paramId and optionId
       }
     }, {
       key: "renderInMenu",
