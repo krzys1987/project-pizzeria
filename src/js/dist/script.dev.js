@@ -145,12 +145,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var option = param.options[optionId];
             console.log('option, optrionId :', option, optionId);
             console.log('### NOTE ### paramId should be compared to default and +/- from its value');
-          }
-        } //update calculated price in the HTML
+          } //WHEN IS ON PAGE DONT LOAD PROPERLY
+          // update calculated price in the HTML
+          // thisProduct.priceElem.innerHTML = price;
 
-
-        thisProduct.priceElem.innerHTML = price; // debugger;
+        } // debugger;
         //show all classes of thisProduct
+
 
         console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
 
@@ -158,7 +159,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         var yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem); //put chosen products prices to HTML
 
-        var priceHTML = yourChosenproducts.innerHTML; // //set a price variable
+        var priceHTML = yourChosenproducts.innerHTML; //set a price variable //whe
         // let price = thisProduct.data.price;
         //set price to default price --> its value might change, depended on chosen paramId and optionId
       }

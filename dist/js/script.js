@@ -121,10 +121,13 @@
             console.log('### NOTE ### paramId should be compared to default and +/- from its value');
 
           }
+
+        //WHEN IS ON PAGE DONT LOAD PROPERLY
+        // update calculated price in the HTML
+        // thisProduct.priceElem.innerHTML = price;
+
         }
 
-        //update calculated price in the HTML
-        thisProduct.priceElem.innerHTML = price;
 
         // debugger;
         //show all classes of thisProduct
@@ -137,7 +140,7 @@
         //put chosen products prices to HTML
         const priceHTML = yourChosenproducts.innerHTML;
 
-        // //set a price variable
+        //set a price variable //whe
         // let price = thisProduct.data.price;
 
 
