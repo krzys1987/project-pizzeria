@@ -145,13 +145,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var option = param.options[optionId];
             console.log('option, optionId :', option, optionId);
             console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value');
-          } // update calculated price in the HTML
-          // thisProduct.priceElem.innerHTML = price;
-          //WHEN IS ON PAGE DONT LOAD PROPERLY
-
+          }
         } // debugger;
-        //show all classes of thisProduct
+        // update calculated price in the HTML
 
+
+        console.log(thisProduct, 'priceElem', priceElem); // console.log('updatedPrice', thisProduct.priceElem.innerHTML = price); //dont work
+        // thisProduct.priceElem.innerHTML = price;
+        //show all classes of thisProduct
 
         console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
 

@@ -122,16 +122,16 @@
 
           }
 
-          // update calculated price in the HTML
-          // thisProduct.priceElem.innerHTML = price;
-
-
-        //WHEN IS ON PAGE DONT LOAD PROPERLY
 
         }
 
-
         // debugger;
+        // update calculated price in the HTML
+        console.log(thisProduct, 'priceElem', priceElem);
+        // console.log('updatedPrice', thisProduct.priceElem.innerHTML = price); //dont work
+        // thisProduct.priceElem.innerHTML = price;
+
+
         //show all classes of thisProduct
         console.log('thisProduct classes', thisProduct);
 
