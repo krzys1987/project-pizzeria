@@ -143,11 +143,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
-            console.log('option, optrionId :', option, optionId);
+            console.log('option, optionId :', option, optionId);
             console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value');
-          } //WHEN IS ON PAGE DONT LOAD PROPERLY
-          // update calculated price in the HTML
+          } // update calculated price in the HTML
           // thisProduct.priceElem.innerHTML = price;
+          //WHEN IS ON PAGE DONT LOAD PROPERLY
 
         } // debugger;
         //show all classes of thisProduct

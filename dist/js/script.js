@@ -117,14 +117,16 @@
           for(let optionId in param.options){
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             const option = param.options[optionId];
-            console.log('option, optrionId :', option, optionId);
+            console.log('option, optionId :', option, optionId);
             console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value');
 
           }
 
+          // update calculated price in the HTML
+          // thisProduct.priceElem.innerHTML = price;
+
+
         //WHEN IS ON PAGE DONT LOAD PROPERLY
-        // update calculated price in the HTML
-        // thisProduct.priceElem.innerHTML = price;
 
         }
 
