@@ -85,6 +85,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         console.log('initOrderForm');
         thisProduct.form.addEventListener('submit', function (event) {
+          //note -->submit event is designed for forms, so I deal with a form
           event.preventDefault();
           thisProduct.processOrder();
         });
