@@ -138,13 +138,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           var param = thisProduct.data.params[paramId];
           console.log('paramId, param', param, paramId);
-          console.log('### NOTE ### FIX IT: paramId should be compared to default and +/- from its value'); //a loop within every product opions in chosen category
+          console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value'); //a loop within every product opions in chosen category
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
             console.log('option, optrionId :', option, optionId);
-            console.log('### NOTE ### paramId should be compared to default and +/- from its value');
+            console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value');
           } //WHEN IS ON PAGE DONT LOAD PROPERLY
           // update calculated price in the HTML
           // thisProduct.priceElem.innerHTML = price;

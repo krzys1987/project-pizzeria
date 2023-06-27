@@ -111,14 +111,14 @@
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           const param = thisProduct.data.params[paramId];
           console.log('paramId, param', param, paramId);
-          console.log('### NOTE ### FIX IT: paramId should be compared to default and +/- from its value');
+          console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value');
 
           //a loop within every product opions in chosen category
           for(let optionId in param.options){
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             const option = param.options[optionId];
             console.log('option, optrionId :', option, optionId);
-            console.log('### NOTE ### paramId should be compared to default and +/- from its value');
+            console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value');
 
           }
 
