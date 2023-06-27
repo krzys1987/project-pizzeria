@@ -85,10 +85,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         console.log('initOrderForm');
         thisProduct.form.addEventListener('submit', function (event) {
+          //note -->submit event is designed for forms, so I deal with a form
           event.preventDefault();
           thisProduct.processOrder();
         });
-        debugger; //manually start loops for Product
+        debugger; //manually start 4 loops for initOrderForm
 
         var _iteratorNormalCompletion = true;
         var _didIteratorError = false;

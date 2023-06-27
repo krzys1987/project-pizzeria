@@ -80,7 +80,7 @@
           thisProduct.processOrder();
         });
 
-        debugger; //manually start loops for Product
+        debugger; //manually start 4 loops for initOrderForm
 
         for(let input of thisProduct.formInputs){
           input.addEventListener('change', function(){

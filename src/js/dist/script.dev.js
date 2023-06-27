@@ -89,7 +89,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           event.preventDefault();
           thisProduct.processOrder();
         });
-        debugger; //manually start loops for Product
+        debugger; //manually start 4 loops for initOrderForm
 
         var _iteratorNormalCompletion = true;
         var _didIteratorError = false;

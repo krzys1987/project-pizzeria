@@ -75,12 +75,12 @@
       initOrderForm(){
         const thisProduct = this;
         console.log('initOrderForm');
-        thisProduct.form.addEventListener('submit', function(event){
+        thisProduct.form.addEventListener('submit', function(event){ //note -->submit event is designed for forms, so I deal with a form
           event.preventDefault();
           thisProduct.processOrder();
         });
 
-        debugger; //manually start loops for Product
+        debugger; //manually start 4 loops for initOrderForm
 
         for(let input of thisProduct.formInputs){
           input.addEventListener('change', function(){
