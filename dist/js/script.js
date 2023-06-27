@@ -80,6 +80,8 @@
           thisProduct.processOrder();
         });
 
+        debugger; //manually start loops for Product
+
         for(let input of thisProduct.formInputs){
           input.addEventListener('change', function(){
             thisProduct.processOrder();
@@ -116,7 +118,7 @@
         }
 
         //update calculated price in the HTML
-        debugger;
+        // debugger;
         //show all classes of thisProduct
         console.log('thisProduct classes', thisProduct);
 

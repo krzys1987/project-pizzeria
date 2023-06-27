@@ -88,6 +88,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           event.preventDefault();
           thisProduct.processOrder();
         });
+        debugger; //manually start loops for Product
+
         var _iteratorNormalCompletion = true;
         var _didIteratorError = false;
         var _iteratorError = undefined;
@@ -139,9 +141,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             console.log('option, optrionId :', option, optionId);
           }
         } //update calculated price in the HTML
+        // debugger;
+        //show all classes of thisProduct
 
-
-        debugger; //show all classes of thisProduct
 
         console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
 
