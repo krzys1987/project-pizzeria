@@ -10,9 +10,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 // eslint-disable-line no-unused-vars
 // const { active } = require("browser-sync");
 {
-  'use strict'; // console.log('###'+'select.menuProduct.priceElem'+'###'+'code is:' +select.menuProduct.priceElem);
-  // thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
-
+  'use strict';
 
   var select = {
     templateOf: {
@@ -73,23 +71,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.getElements();
       this.initAccordion();
       this.initOrderForm();
-      this.processOrder(); //amend nessesary --> error disappearing other products
-
+      this.processOrder();
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
-    }
+    } //initOrderForm --> select product to buy
+
 
     _createClass(Product, [{
       key: "initOrderForm",
       value: function initOrderForm() {
         var thisProduct = this;
-        console.log('initOrderForm');
         thisProduct.form.addEventListener('submit', function (event) {
-          //note -->submit event is designed for forms, so I deal with a form
           event.preventDefault();
           thisProduct.processOrder();
-        });
-        debugger; //manually start 4 loops for initOrderForm
+        }); //Loop start for thisProduct -->4 loops
 
         var _iteratorNormalCompletion = true;
         var _didIteratorError = false;
@@ -120,14 +115,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         thisProduct.cartButton.addEventListener('click', function (event) {
           event.preventDefault();
           thisProduct.processOrder();
-          alert('buttom clicked&price update');
+          alert('the product added to shopping bag');
         });
       }
     }, {
       key: "processOrder",
       value: function processOrder() {
-        var thisProduct = this;
-        console.log('processOrder'); // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
+        var thisProduct = this; // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
 
         var formData = utils.serializeFormToObject(thisProduct.form);
         console.log('###formData###', formData); // set price to default price
@@ -137,32 +131,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           var param = thisProduct.data.params[paramId];
-          console.log('paramId, param', param, paramId);
-          console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value'); //a loop within every product opions in chosen category
+          console.log('paramId, param', param, paramId); //### NOTE ### FIX IT to count price: default paramId = default price, and +/- from its value
+          //a loop within every product opions in chosen category
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
-            console.log('option, optionId :', option, optionId);
-            console.log('### NOTE ### FIX IT: default paramId = default price, and +/- from its value');
+            console.log('option, optionId'); //### NOTE ### FIX IT to count price
           }
-        } // debugger;
-        // update calculated price in the HTML
+        } // update calculated price in the HTML
 
 
-        console.log(thisProduct, 'priceElem', priceElem); // console.log('updatedPrice', thisProduct.priceElem.innerHTML = price); //dont work
-        // thisProduct.priceElem.innerHTML = price;
-        //show all classes of thisProduct
-
-        console.log('thisProduct classes', thisProduct); //pick a value from thisProduct classes
-
-        console.log('thisProduct price', thisProduct.element.querySelector(select.menuProduct.priceElem)); //always show 9
+        console.log(thisProduct, 'priceElem', select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
+        //pick a value from thisProduct classes
 
         var yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem); //put chosen products prices to HTML
 
-        var priceHTML = yourChosenproducts.innerHTML; //set a price variable //whe
-        // let price = thisProduct.data.price;
-        //set price to default price --> its value might change, depended on chosen paramId and optionId
+        var priceHTML = yourChosenproducts.innerHTML; //[DONE ALREADY] set a price variable
       }
     }, {
       key: "renderInMenu",
@@ -170,8 +155,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         /* generate HTML based on template */
 
-        var generateHTML = templates.menuProduct(thisProduct.data); //console.log('generateHTML' + templates.menuProduct(thisProduct.data));
-
+        var generateHTML = templates.menuProduct(thisProduct.data);
         /* create element using utils.createElementFromHTML */
 
         thisProduct.element = utils.createDOMFromHTML(generateHTML); //create a DOM element and save it as an attribute of the new-created instance
@@ -189,15 +173,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       key: "getElements",
       value: function getElements() {
         var thisProduct = this;
-        console.log('###' + 'select.menuProduct.clickable' + '###' + 'code is:' + select.menuProduct.clickable);
         thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
-        console.log('###' + 'select.menuProduct.amountWidget.form' + '###' + 'code is:' + select.menuProduct.amountWidget.form);
         thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
-        console.log('###' + 'select.all.formInputs' + '###' + 'code is:' + select.all.formInputs);
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
-        console.log('###' + 'select.menuProduct.cartButton' + '###' + 'code is:' + select.menuProduct.cartButton);
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
-        console.log('###' + 'select.menuProduct.priceElem' + '###' + 'code is:' + select.menuProduct.priceElem);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
       }
     }, {
@@ -206,31 +185,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         /* find the clickable trigger (the element that should react to clicking) */
 
-        console.log('thisProduct.accordionTrigger.addEvenLister --> watch menu products');
-        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //working just fine
-        // select.Product.getElements.thisProduct.accordionTrigger;
+        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); // select.Product.getElements.thisProduct.accordionTrigger;
 
         /* select menu products */
 
-        thisProduct.accordionTrigger.addEventListener('click', function (event) {// /* CANNOT MOVE THESE TWO FUNCTION BELLOW --> ERROR BUT WE WILL SEE  */
-          // const initOrderForm = function (){
-          //   const thisProduct = this;
-          //   console.log('###methood name'+initOrderForm);
-          // }
-          // const processOrder = function (){
-          //   const thisProduct = this;
-          //   console.log('###methood name'+processOrder);
-          // }
-        });
-        /* console.log on "select" object */
-
-        console.log('###SELECT-OBJECT TESTING###', document.querySelector(select.templateOf.menuProduct));
+        thisProduct.accordionTrigger.addEventListener('click', function (event) {});
         /* START: add event listener to clickable trigger on event click */
 
         clickableTrigger.addEventListener('click', function (event) {
           /* prevent default action for event */
           event.preventDefault();
-          /* find active product (product that has active class) */
+          /* find active product (product that has active class). Two methods bellow:
+          1. ifs(DISABLED NOW), 2. toggle */
           // const hasActiveClass = clickableTrigger.classList.contains('active');
 
           /* if there is active product and it's not thisProduct.element, remove class active from it */
@@ -243,7 +209,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           clickableTrigger.classList.toggle('active');
           /* toggle active class on thisProduct.element */
 
-          thisProduct.element.classList.toggle('active'); //it works, toggle class 'active' to clicked products
+          thisProduct.element.classList.toggle('active');
         });
       }
     }]);
@@ -264,9 +230,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       for (var productData in thisApp.data.products) {
         //loop iterates productData of all products
         new Product(productData, thisApp.data.products[productData]); //a new instance created, contains 2 argument: productData (object properties), thisApp.data.products[productData] (object values)
-      } // const testProduct = new Product (); //[potencial problem] create a new insance but why
-      // console.log('testProduct', testProduct);
-
+      }
     },
     init: function init() {
       var thisApp = this;
