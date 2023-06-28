@@ -168,17 +168,12 @@
         /* find the clickable trigger (the element that should react to clicking) */
         const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
 
-      //   /* watch clickableTrigger for actions */
-      //   thisProduct.accordionTrigger.addEventListener('click', function(event) {
-
-      // });
-
         /* START: add event listener to clickable trigger on event click */
         clickableTrigger.addEventListener('click', function(event) {
           /* prevent default action for event */
           event.preventDefault();
           /* find active product (product that has active class). */
-          
+
           clickableTrigger.classList.toggle('active');
 
           /* toggle active class on thisProduct.element */
