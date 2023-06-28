@@ -115,7 +115,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         thisProduct.cartButton.addEventListener('click', function (event) {
           event.preventDefault();
           thisProduct.processOrder();
-          alert('the product added to shopping bag');
+          alert('add to your order');
         });
       }
     }, {
@@ -131,18 +131,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           var param = thisProduct.data.params[paramId];
-          console.log('paramId, param', param, paramId); //### NOTE ### FIX IT to count price: default paramId = default price, and +/- from its value
-          //a loop within every product opions in chosen category
+          console.log('paramId, param', param, paramId); //a loop within every product opions in chosen category
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
-            console.log('option, optionId'); //### NOTE ### FIX IT to count price
+            console.log('option, optionId');
           }
-        } // update calculated price in the HTML
+        } //show the product value
 
 
-        console.log(thisProduct, 'priceElem', select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
+        var priceElem = select.menuProduct.priceElem; //check it
+        // update calculated price in the HTML
+
+        console.log('###', thisProduct, 'priceElem >', select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
         //pick a value from thisProduct classes
 
         var yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem); //put chosen products prices to HTML
