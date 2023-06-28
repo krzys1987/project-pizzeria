@@ -115,6 +115,15 @@
 
           }
 
+          //check if formData property has a property equal category name
+
+          //if so, check if the property is default option
+
+          //else if
+          //price + THEOPTIONCOST
+
+          //
+
 
         }
 

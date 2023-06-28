@@ -137,7 +137,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
             console.log('option, optionId');
-          }
+          } //check if formData property has a property equal category name
+          //if so, check if the property is default option
+          //else if
+          //price + THEOPTIONCOST
+          //
+
         } //show the product value
 
 
