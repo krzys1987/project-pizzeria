@@ -185,26 +185,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this;
         /* find the clickable trigger (the element that should react to clicking) */
 
-        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); // select.Product.getElements.thisProduct.accordionTrigger;
+        var clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable); //   /* watch clickableTrigger for actions */
+        //   thisProduct.accordionTrigger.addEventListener('click', function(event) {
+        // });
 
-        /* select menu products */
-
-        thisProduct.accordionTrigger.addEventListener('click', function (event) {});
         /* START: add event listener to clickable trigger on event click */
 
         clickableTrigger.addEventListener('click', function (event) {
           /* prevent default action for event */
           event.preventDefault();
-          /* find active product (product that has active class). Two methods bellow:
-          1. ifs(DISABLED NOW), 2. toggle */
-          // const hasActiveClass = clickableTrigger.classList.contains('active');
-
-          /* if there is active product and it's not thisProduct.element, remove class active from it */
-          // if (hasActiveClass) {
-          //   clickableTrigger.classList.add('active')
-          // } else {
-          //   clickableTrigger.classList.remove('active')
-          // }
+          /* find active product (product that has active class). */
 
           clickableTrigger.classList.toggle('active');
           /* toggle active class on thisProduct.element */
