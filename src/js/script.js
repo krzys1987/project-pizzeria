@@ -98,7 +98,7 @@
         const formData = utils.serializeFormToObject(thisProduct.form);
         console.log('###formData###', formData);
 
-        // set price to default price
+        // set price to default price --> 'let' variable to - or + its value
         let price = thisProduct.data.price;
 
         //a loop throw every of general category (param)

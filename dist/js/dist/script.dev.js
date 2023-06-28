@@ -124,7 +124,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this; // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
 
         var formData = utils.serializeFormToObject(thisProduct.form);
-        console.log('###formData###', formData); // set price to default price
+        console.log('###formData###', formData); // set price to default price --> 'let' variable to - or + its value
 
         var price = thisProduct.data.price; //a loop throw every of general category (param)
 
