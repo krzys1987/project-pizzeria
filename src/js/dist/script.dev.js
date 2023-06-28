@@ -139,9 +139,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             console.log('option, optionId');
           } //check if formData property has a property equal category name
           //if so, check if the property is default option
-          //else if
-          //price + THEOPTIONCOST
-          //
+          //if it's not, price + property value (option cost)
+          //check if setting are default
+          //if otion wasn't selected > decrease pricge
 
         } //show the product value
 
