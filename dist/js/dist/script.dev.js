@@ -136,12 +136,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
-            console.log('option, optionId');
-          } //check if formData property has a property equal category name
-          //if so, check if the property is default option
-          //else if
-          //price + THEOPTIONCOST
-          //
+            console.log('option, optionId'); //check if formData  property contains paramId with selected optionId
+
+            if (formData.contains(paramId[optionId])) {
+              //if so, check is selected optioIn is default value --> don't change the price
+              console.log('you have chosen pizza with optionId'); //if so, check is selected optioIn is default value --> don't change the price
+            } //if not
+            //if it's not, price + property value (option cost)
+
+          } //if so, check if the property is default option
+          //check if setting are default
+          //if otion wasn't selected > decrease pricge
 
         } //show the product value
 
