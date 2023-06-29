@@ -136,7 +136,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
-            console.log('option, optionId');
+            console.log('option, optionId'); //check if there is param with a name of paramId in formData and if it includes optionId
           }
         } //show the product value
 
