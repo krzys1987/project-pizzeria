@@ -112,39 +112,11 @@
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             const option = param.options[optionId];
             console.log('option, optionId');
-            //check if formData  property contains paramId with selected optionId
-            if(formData.contains(paramId[optionId])){
-              //if so, check is selected optioId is default value --> don't change the price
-              // console.log('you have chosen pizza with default set - optionId');
 
-              //if picked only from default optionId but not whole set --> don't change the price
-
-            } else if {
-              //if so, but selected optionIds are not default set --> change price
-
-
-            }
-
-              //if so, check is selected optioIn is default value --> don't change the price
-
-
-            //if not
-
-            //if it's not, price + property value (option cost)
 
 
 
           }
-
-
-
-          //if so, check if the property is default option
-
-
-          //check if setting are default
-
-          //if otion wasn't selected > decrease pricge
-
 
 
 
