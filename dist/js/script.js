@@ -113,15 +113,17 @@
             const option = param.options[optionId];
             console.log('option, optionId');
             //check if there is param with a name of paramId in formData and if it includes optionId
+            debugger;
             if(formData[paramId] && formData[paramId].includes(optionId)) {
               // check if the option is not default
-              if(let !option.default) {
+              if(!option.default) {
               // add option price to price variable
-              let newPrice =
+              let orderPrice = option.price;
+              console.log('Your order cost:', orderPrice);
               }
-            } if () {
+            } else {
               // check if the option is default
-              if(formData[!option.default]) {
+              if(option.default) {
                 // reduce price variable
               }
             }
