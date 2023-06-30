@@ -138,8 +138,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var option = param.options[optionId];
             console.log('option, optionId'); //check if there is param with a name of paramId in formData and if it includes optionId
 
-            debugger;
-
             if (formData[paramId] && formData[paramId].includes(optionId)) {
               // check if the option is not default
               if (!option["default"]) {
