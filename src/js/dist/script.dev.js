@@ -147,8 +147,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               }
             } else {
               // check if the option is default
-              if (option["default"]) {// reduce price variable
-                // let orderPrice
+              if (option["default"]) {
+                console.log('basic pizza set cost 20$');
               }
             }
           }
@@ -194,6 +194,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
+        thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // '.product__images'
       }
     }, {
       key: "initAccordion",
