@@ -116,7 +116,7 @@
             if(formData[paramId] && formData[paramId].includes(optionId)) {
               // check if the option is not default
               if(!option.default) {
-              // add option price to price variable
+              // add option price to price variable --
               let orderPrice = option.price;
               console.log('Your order cost:', orderPrice);
               }
@@ -124,6 +124,7 @@
               // check if the option is default
               if(option.default) {
                 // reduce price variable
+                // let orderPrice
               }
             }
           }

@@ -141,13 +141,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             if (formData[paramId] && formData[paramId].includes(optionId)) {
               // check if the option is not default
               if (!option["default"]) {
-                // add option price to price variable
+                // add option price to price variable --> it's default set
                 var orderPrice = option.price;
                 console.log('Your order cost:', orderPrice);
               }
             } else {
               // check if the option is default
               if (option["default"]) {// reduce price variable
+                // let orderPrice
               }
             }
           }
