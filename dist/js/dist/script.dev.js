@@ -132,7 +132,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           var param = thisProduct.data.params[paramId];
           console.log('paramId, param', param, paramId); //a loop within every product opions in chosen category
-          //[IN PROGRESS] decrease/increase thisProduct price`
+          //[IN PROGRESS] decrease/increase thisProduct price --> put code at seconf loop
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
