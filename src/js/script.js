@@ -175,7 +175,7 @@
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
-        thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // '.product__images'
+        thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
       }
 
       initAccordion(){
