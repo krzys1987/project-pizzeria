@@ -137,8 +137,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
+<<<<<<< HEAD
             console.log('option, optionId'); // dataSource.products.pizza.images.classList.contains(paramId-optionId);
             //check if there is param with a name of paramId in formData and if it includes optionId
+=======
+            console.log('option, optionId'); //find product pic at dataSource.products.pizza.images
+            // thisProduct.querySelector(paramId-optionId);
+
+            var getPic = document.querySelector(paramId - optionId);
+            getPic.addEventListener('click', thisProduct.getPic); //check if there is param with a name of paramId in formData and if it includes optionId
+>>>>>>> 9bd77cf318562e4bca8c29fd7849b08a3b513ab7
 
             if (formData[paramId] && formData[paramId].includes(optionId)) {
               //find product pic contains optiion //pictures are stored at dataSource.products.pizza.images

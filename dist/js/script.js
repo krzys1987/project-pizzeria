@@ -113,7 +113,14 @@
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             const option = param.options[optionId];
             console.log('option, optionId');
+<<<<<<< HEAD
             // dataSource.products.pizza.images.classList.contains(paramId-optionId);
+=======
+            //find product pic at dataSource.products.pizza.images
+            // thisProduct.querySelector(paramId-optionId);
+            const getPic = document.querySelector(paramId-optionId);
+            getPic.addEventListener('click', thisProduct.getPic);
+>>>>>>> 9bd77cf318562e4bca8c29fd7849b08a3b513ab7
             //check if there is param with a name of paramId in formData and if it includes optionId
             if(formData[paramId] && formData[paramId].includes(optionId)) {
               //find product pic contains optiion //pictures are stored at dataSource.products.pizza.images
