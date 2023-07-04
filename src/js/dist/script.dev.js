@@ -211,7 +211,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
         thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
 
-        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget);
+        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //SelectAll might cause chose other product div
       }
     }, {
       key: "initAccordion",
