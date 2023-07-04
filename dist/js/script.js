@@ -108,38 +108,38 @@
           console.log('paramId, param', param, paramId);
 
           //a loop within every product opions in chosen category
-          //[IN PROGRESS] decrease/increase thisProduct price --> put code at seconf loop
+          //[IN PROGRESS] decrease/increase thisProduct price --> put code at second loop
           for(let optionId in param.options){
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             const option = param.options[optionId];
             console.log('option, optionId');
-<<<<<<< HEAD
-            // dataSource.products.pizza.images.classList.contains(paramId-optionId);
-=======
-            //find product pic at dataSource.products.pizza.images
-            // thisProduct.querySelector(paramId-optionId);
-            const getPic = document.querySelector(paramId-optionId);
-            getPic.addEventListener('click', thisProduct.getPic);
->>>>>>> 9bd77cf318562e4bca8c29fd7849b08a3b513ab7
-            //check if there is param with a name of paramId in formData and if it includes optionId
-            if(formData[paramId] && formData[paramId].includes(optionId)) {
-              //find product pic contains optiion //pictures are stored at dataSource.products.pizza.images
-              const getPic = document.querySelector(paramId, optionId);
-              //console.log('getPic', getPic); //shows null
-              getPic.addEventListener('click').classNames.menuProduct.imageVisible('active');
-              // product__wrapper.classList.contains(paramId-optionId);
-              // check if the option is not default
-              if(!option.default) {
-              // add option price to price variable --> it's default set
-              let orderPrice = option.price;
-              console.log('Your order cost:', orderPrice);
-              }
-            } else {
-              // check if the option is default
-              if(option.default) {
-                console.log('basic pizza set cost 20$');
-              }
+
+            //find impages for selected product > contains paramId-optionId
+            const optionImage = thisProduct.imageWrapper.querySelector(paramId-optionId);
+
+            //select paramId at formData but only ones contain optionId
+            const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+              if(optionSelected){
+                //check if the option is not default, if YES do nothing, but if no -->
+                if(!option.default) {
+                  // add option price to price variable --> it's default set
+                  let orderPrice = option.price;
+                  console.log('Your order cost:', orderPrice);
+                  }
+                } else {
+                  // check if the option is default
+                  if(option.default) {
+                    console.log('basic pizza set cost 20$');
+                  }
+
+                // eslint-disable-next-line no-empty
+                if(optionImage){
+                  classNames.menuProduct.imageVisible;
+
+                }
+
             }
+
           }
 
         }
