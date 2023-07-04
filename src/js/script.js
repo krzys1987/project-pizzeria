@@ -63,8 +63,8 @@
         this.getElements();
         this.initAccordion();
         this.initOrderForm();
-        this.processOrder();
         this.initAmountWidget();
+        this.processOrder();
 
        console.log('PRODUCT', this)
         console.log('new Product:', thisProduct);
@@ -196,6 +196,11 @@
         thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //SelectAll might cause chose other product div
       }
 
+      initAmountWidget(){
+        const thisProduct = this;
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+      }
+
       initAccordion(){
         const thisProduct = this;
 
@@ -214,6 +219,7 @@
 
           thisProduct.element.classList.toggle('active');
         });
+
 
       }
     }

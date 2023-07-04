@@ -63,8 +63,8 @@
         this.getElements();
         this.initAccordion();
         this.initOrderForm();
-        this.processOrder();
         this.initAmountWidget();
+        this.processOrder();
 
        console.log('PRODUCT', this)
         console.log('new Product:', thisProduct);
@@ -193,7 +193,12 @@
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
         thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
-        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget);
+        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //SelectAll might cause chose other product div
+      }
+
+      initAmountWidget(){
+        const thisProduct = this;
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
       }
 
       initAccordion(){
@@ -214,6 +219,7 @@
 
           thisProduct.element.classList.toggle('active');
         });
+
 
       }
     }
