@@ -154,11 +154,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               // check if the option is default
               if (option["default"]) {
                 console.log('basic pizza set cost 20$');
-              } // eslint-disable-next-line no-empty
+              } //get an image to selectec product
 
 
               if (optionImage) {
                 classNames.menuProduct.imageVisible;
+
+                if (optionSelected) {
+                  console.log('');
+                }
               }
             }
           }

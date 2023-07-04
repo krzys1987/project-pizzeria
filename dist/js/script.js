@@ -132,9 +132,12 @@
                     console.log('basic pizza set cost 20$');
                   }
 
-                // eslint-disable-next-line no-empty
+                //get an image to selectec product
                 if(optionImage){
                   classNames.menuProduct.imageVisible;
+                  if(optionSelected){
+                    console.log('')
+                  }
 
                 }
 
