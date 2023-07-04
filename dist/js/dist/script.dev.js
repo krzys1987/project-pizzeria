@@ -72,6 +72,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.initAccordion();
       this.initOrderForm();
       this.processOrder();
+      this.initAmountWidget();
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
     } //initOrderForm --> select product to buy
@@ -209,6 +210,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
         thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
+
+        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget);
       }
     }, {
       key: "initAccordion",
@@ -234,6 +237,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     return Product;
   }();
+
+  var amountWidget = function amountWidget(element) {
+    _classCallCheck(this, amountWidget);
+
+    var thisWidget = this;
+    console.log('AmountWidget', this);
+  };
 
   var app = {
     initData: function initData() {
