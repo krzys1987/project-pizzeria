@@ -137,10 +137,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
-            console.log('option, optionId'); //check if there is param with a name of paramId in formData and if it includes optionId
+            console.log('option, optionId'); // dataSource.products.pizza.images.classList.contains(paramId-optionId);
+            //check if there is param with a name of paramId in formData and if it includes optionId
 
             if (formData[paramId] && formData[paramId].includes(optionId)) {
+              //find product pic contains optiion //pictures are stored at dataSource.products.pizza.images
+              var getPic = document.querySelector(paramId, optionId); //console.log('getPic', getPic); //shows null
+
+              getPic.addEventListener('click').classNames.menuProduct.imageVisible('active'); // product__wrapper.classList.contains(paramId-optionId);
               // check if the option is not default
+
               if (!option["default"]) {
                 // add option price to price variable --> it's default set
                 var orderPrice = option.price;
