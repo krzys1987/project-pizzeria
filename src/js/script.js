@@ -216,6 +216,14 @@
       }
     }
 
+    class amountWidget {
+      constructor(element){
+        const thisWidget = this;
+
+        console.log('AmountWidget', this);
+      }
+    }
+
     const app = {
 
         initData: function(){

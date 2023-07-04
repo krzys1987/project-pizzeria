@@ -235,6 +235,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     return Product;
   }();
 
+  var amountWidget = function amountWidget(element) {
+    _classCallCheck(this, amountWidget);
+
+    var thisWidget = this;
+    console.log('AmountWidget', this);
+  };
+
   var app = {
     initData: function initData() {
       var thisApp = this;
