@@ -63,7 +63,7 @@
         this.getElements();
         this.initAccordion();
         this.initOrderForm();
-        // this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
+        this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
         this.processOrder();
 
        console.log('PRODUCT', this)
@@ -224,7 +224,7 @@
       }
     }
 
-    class amountWidget {
+    class AmountWidget {
       constructor(element){
         const thisWidget = this;
 

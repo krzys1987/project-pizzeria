@@ -63,7 +63,7 @@
         this.getElements();
         this.initAccordion();
         this.initOrderForm();
-        // this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
+        this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
         this.processOrder();
 
        console.log('PRODUCT', this)
@@ -193,12 +193,12 @@
         thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
         thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
-        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //SelectAll might cause chose other product div
+        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, - . SelectAll might cause chose other product div
       }
 
       initAmountWidget(){
         const thisProduct = this;
-        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); //create a new instance and give it a reference to div with buttons: -, +
       }
 
       initAccordion(){
@@ -224,7 +224,7 @@
       }
     }
 
-    class amountWidget {
+    class AmountWidget {
       constructor(element){
         const thisWidget = this;
 

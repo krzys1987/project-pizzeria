@@ -70,7 +70,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.renderInMenu();
       this.getElements();
       this.initAccordion();
-      this.initOrderForm(); // this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
+      this.initOrderForm();
+      this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
 
       this.processOrder();
       console.log('PRODUCT', this);
@@ -244,8 +245,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     return Product;
   }();
 
-  var amountWidget = function amountWidget(element) {
-    _classCallCheck(this, amountWidget);
+  var AmountWidget = function AmountWidget(element) {
+    _classCallCheck(this, AmountWidget);
 
     var thisWidget = this;
     console.log('AmountWidget', this);

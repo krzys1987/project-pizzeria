@@ -70,7 +70,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.renderInMenu();
       this.getElements();
       this.initAccordion();
-      this.initOrderForm(); // this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
+      this.initOrderForm();
+      this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
 
       this.processOrder();
       console.log('PRODUCT', this);
@@ -211,13 +212,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
         thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
 
-        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //SelectAll might cause chose other product div
+        thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, - . SelectAll might cause chose other product div
       }
     }, {
       key: "initAmountWidget",
       value: function initAmountWidget() {
         var thisProduct = this;
-        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); //create a new instance and give it a reference to div with buttons: -, +
       }
     }, {
       key: "initAccordion",
@@ -244,8 +245,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     return Product;
   }();
 
-  var amountWidget = function amountWidget(element) {
-    _classCallCheck(this, amountWidget);
+  var AmountWidget = function AmountWidget(element) {
+    _classCallCheck(this, AmountWidget);
 
     var thisWidget = this;
     console.log('AmountWidget', this);
