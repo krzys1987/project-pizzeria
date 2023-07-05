@@ -70,8 +70,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.renderInMenu();
       this.getElements();
       this.initAccordion();
-      this.initOrderForm();
-      this.initAmountWidget();
+      this.initOrderForm(); // this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
+
       this.processOrder();
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
