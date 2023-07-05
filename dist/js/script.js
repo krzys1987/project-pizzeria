@@ -229,6 +229,7 @@
         const thisWidget = this;
 
         console.log('AmountWidget', this);
+        console.log('contructor arg', element);
       }
     }
 
