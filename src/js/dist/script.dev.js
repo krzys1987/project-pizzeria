@@ -217,7 +217,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       key: "initAmountWidget",
       value: function initAmountWidget() {
         var thisProduct = this;
-        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); //create a new instance and give it a reference to div with buttons: -, +
       }
     }, {
       key: "initAccordion",

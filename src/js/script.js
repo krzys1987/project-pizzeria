@@ -198,7 +198,7 @@
 
       initAmountWidget(){
         const thisProduct = this;
-        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); //create a new instance and give it a reference to div with buttons: -, +
       }
 
       initAccordion(){
