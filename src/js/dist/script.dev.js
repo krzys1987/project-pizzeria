@@ -249,6 +249,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var thisWidget = this;
     console.log('AmountWidget', this);
+    console.log('contructor arg', element);
   };
 
   var app = {
