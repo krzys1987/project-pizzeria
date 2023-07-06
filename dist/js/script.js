@@ -99,9 +99,6 @@
         const formData = utils.serializeFormToObject(thisProduct.form);
         console.log('###formData###', formData);
 
-        // set price to default price --> 'let' variable to - or + its value
-        let price = thisProduct.data.price;
-
         //a loop throw every of general category (param)
         for(let paramId in thisProduct.data.params){
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
@@ -114,6 +111,10 @@
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             const option = param.options[optionId];
             console.log('option, optionId');
+
+
+            // set price to default price --> 'let' variable to - or + its value
+            let price = thisProduct.data.price;
 
             // add option price to price variable --> it's default set
             let orderPrice = option.price;

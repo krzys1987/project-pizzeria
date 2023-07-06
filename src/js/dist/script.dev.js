@@ -126,9 +126,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         var thisProduct = this; // covert form to object structure e.g. { sauce: ['tomato'], toppings: ['olives', 'redPeppers']}
 
         var formData = utils.serializeFormToObject(thisProduct.form);
-        console.log('###formData###', formData); // set price to default price --> 'let' variable to - or + its value
-
-        var price = thisProduct.data.price; //a loop throw every of general category (param)
+        console.log('###formData###', formData); //a loop throw every of general category (param)
 
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
@@ -139,7 +137,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId];
-            console.log('option, optionId'); // add option price to price variable --> it's default set
+            console.log('option, optionId'); // set price to default price --> 'let' variable to - or + its value
+
+            var price = thisProduct.data.price; // add option price to price variable --> it's default set
 
             var orderPrice = option.price; //find impages for selected product > contains paramId-optionId
 
