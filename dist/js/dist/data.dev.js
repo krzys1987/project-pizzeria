@@ -70,12 +70,12 @@ dataSource.products = {
           olives: {
             label: 'Olives',
             price: 2,
-            "default": true
+            "default": false
           },
           redPeppers: {
             label: 'Red peppers',
             price: 2,
-            "default": true
+            "default": false
           },
           greenPeppers: {
             label: 'Green peppers',
