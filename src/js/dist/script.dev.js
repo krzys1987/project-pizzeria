@@ -248,7 +248,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   var AmountWidget = function AmountWidget(element) {
     _classCallCheck(this, AmountWidget);
 
-    var thisWidget = this;
+    var thisWidget = this; //getElements(element) --> function into the methood
+
     thisWidget.element = element;
     thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
     thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);

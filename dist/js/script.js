@@ -227,6 +227,7 @@
     class AmountWidget {
       constructor(element){
         const thisWidget = this;
+        //getElements(element) --> function into the methood
         thisWidget.element = element;
         thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
         thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
