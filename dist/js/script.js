@@ -115,6 +115,9 @@
             const option = param.options[optionId];
             console.log('option, optionId');
 
+            // add option price to price variable --> it's default set
+            let orderPrice = option.price;
+
             //find impages for selected product > contains paramId-optionId
             const optionImage = thisProduct.imageWrapper.querySelector(paramId-optionId);
 
@@ -123,8 +126,6 @@
               if(optionSelected){
                 //check if the option is not default, if YES do nothing, but if no -->
                 if(!option.default) {
-                  // add option price to price variable --> it's default set
-                  let orderPrice = option.price;
                   console.log('Your order cost:', orderPrice);
                   }
                 } else {
