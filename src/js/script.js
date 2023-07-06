@@ -131,7 +131,7 @@
                 } else {
                   // check if the option is default
                   if(option.default) {
-                    console.log('basic pizza set cost 20$');
+                    console.log(orderPrice, 'basic pizza set cost 20$');
                   }
 
                 //get an image to selectec product
@@ -150,7 +150,7 @@
         }
 
         //show the product value
-        const priceElem = select.menuProduct.priceElem; //check it
+        const priceElem = select.menuProduct.priceElem;
 
         // update calculated price in the HTML
         console.log('###', thisProduct, 'priceElem >', select.menuProduct.priceElem);

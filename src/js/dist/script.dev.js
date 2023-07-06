@@ -155,7 +155,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             } else {
               // check if the option is default
               if (option["default"]) {
-                console.log('basic pizza set cost 20$');
+                console.log(orderPrice, 'basic pizza set cost 20$');
               } //get an image to selectec product
 
 
@@ -171,8 +171,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } //show the product value
 
 
-        var priceElem = select.menuProduct.priceElem; //check it
-        // update calculated price in the HTML
+        var priceElem = select.menuProduct.priceElem; // update calculated price in the HTML
 
         console.log('###', thisProduct, 'priceElem >', select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
         //pick a value from thisProduct classes
