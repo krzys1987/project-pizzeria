@@ -249,6 +249,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     _classCallCheck(this, AmountWidget);
 
     var thisWidget = this;
+    thisWidget.element = element;
+    thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
+    thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
+    thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
     console.log('AmountWidget', this);
     console.log('contructor arg', element);
   };
