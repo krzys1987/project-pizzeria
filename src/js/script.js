@@ -105,6 +105,9 @@
           const param = thisProduct.data.params[paramId];
           console.log('paramId, param', param, paramId);
 
+          //set default price
+          let price = thisProduct.data.price;
+
           //a loop within every product opions in chosen category
           //[IN PROGRESS] decrease/increase thisProduct price
           for(let optionId in param.options){
@@ -113,7 +116,7 @@
             // console.log('option, optionId');
 
             // set price to default price --> 'let' variable to - or + its value
-            let price = thisProduct.data.price;
+            // let price = thisProduct.data.price;
 
             // add option price to price variable --> it's default set
             let orderPrice = option.price;

@@ -131,15 +131,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           var param = thisProduct.data.params[paramId];
-          console.log('paramId, param', param, paramId); //a loop within every product opions in chosen category
+          console.log('paramId, param', param, paramId); //set default price
+
+          var price = thisProduct.data.price; //a loop within every product opions in chosen category
           //[IN PROGRESS] decrease/increase thisProduct price
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId]; // console.log('option, optionId');
             // set price to default price --> 'let' variable to - or + its value
-
-            var price = thisProduct.data.price; // add option price to price variable --> it's default set
+            // let price = thisProduct.data.price;
+            // add option price to price variable --> it's default set
 
             var orderPrice = option.price; //find impages for selected product > contains paramId-optionId
 
