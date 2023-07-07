@@ -99,14 +99,14 @@
         const formData = utils.serializeFormToObject(thisProduct.form);
         console.log('###formData###', formData);
 
+        //set default price
+        let price = thisProduct.data.price;
+
         //a loop throw every of general category (param)
         for(let paramId in thisProduct.data.params){
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           const param = thisProduct.data.params[paramId];
           console.log('paramId, param', param, paramId);
-
-          //set default price
-          let price = thisProduct.data.price;
 
           //a loop within every product opions in chosen category
           //[IN PROGRESS] decrease/increase thisProduct price
