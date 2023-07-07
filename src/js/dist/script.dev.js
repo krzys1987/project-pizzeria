@@ -131,8 +131,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
-          var param = thisProduct.data.params[paramId];
-          console.log('paramId, param', param, paramId); //a loop within every product opions in chosen category
+          var param = thisProduct.data.params[paramId]; // console.log('paramId, param', paramId, param);
+          //a loop within every product opions in chosen category
           //[IN PROGRESS] decrease/increase thisProduct price
 
           for (var optionId in param.options) {

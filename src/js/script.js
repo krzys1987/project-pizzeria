@@ -106,7 +106,7 @@
         for(let paramId in thisProduct.data.params){
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           const param = thisProduct.data.params[paramId];
-          console.log('paramId, param', param, paramId);
+          // console.log('paramId, param', paramId, param);
 
           //a loop within every product opions in chosen category
           //[IN PROGRESS] decrease/increase thisProduct price
