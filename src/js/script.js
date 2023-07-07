@@ -106,12 +106,11 @@
           console.log('paramId, param', param, paramId);
 
           //a loop within every product opions in chosen category
-          //[IN PROGRESS] decrease/increase thisProduct price --> put code at second loop
+          //[IN PROGRESS] decrease/increase thisProduct price
           for(let optionId in param.options){
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             const option = param.options[optionId];
-            console.log('option, optionId');
-
+            // console.log('option, optionId');
 
             // set price to default price --> 'let' variable to - or + its value
             let price = thisProduct.data.price;

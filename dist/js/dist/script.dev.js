@@ -132,12 +132,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
           var param = thisProduct.data.params[paramId];
           console.log('paramId, param', param, paramId); //a loop within every product opions in chosen category
-          //[IN PROGRESS] decrease/increase thisProduct price --> put code at second loop
+          //[IN PROGRESS] decrease/increase thisProduct price
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
-            var option = param.options[optionId];
-            console.log('option, optionId'); // set price to default price --> 'let' variable to - or + its value
+            var option = param.options[optionId]; // console.log('option, optionId');
+            // set price to default price --> 'let' variable to - or + its value
 
             var price = thisProduct.data.price; // add option price to price variable --> it's default set
 
