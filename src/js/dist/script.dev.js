@@ -116,8 +116,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         thisProduct.cartButton.addEventListener('click', function (event) {
           event.preventDefault();
-          thisProduct.processOrder();
-          alert('add to your order');
+          thisProduct.processOrder(); // console.log('add to your order');
         });
       }
     }, {

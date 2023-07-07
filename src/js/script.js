@@ -88,7 +88,7 @@
         thisProduct.cartButton.addEventListener('click', function(event){
           event.preventDefault();
           thisProduct.processOrder();
-          alert('add to your order');
+          // console.log('add to your order');
         });
       }
 
