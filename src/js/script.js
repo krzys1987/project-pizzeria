@@ -123,6 +123,11 @@
 
             //find impages for selected product > contains paramId-optionId
             const optionImage = thisProduct.imageWrapper.querySelector(paramId-optionId);
+            if(optionImage){
+              classNames.menuProduct.imageVisible;
+              if(optionSelected){
+                console.log('')
+              }
 
             //select paramId at formData but only ones contain optionId
             const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
@@ -139,12 +144,7 @@
 
                   }
 
-                //get an image to selectec product
-                if(optionImage){
-                  classNames.menuProduct.imageVisible;
-                  if(optionSelected){
-                    console.log('')
-                  }
+
 
                 }
 

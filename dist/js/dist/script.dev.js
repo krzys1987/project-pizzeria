@@ -144,28 +144,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
             var orderPrice = option.price; //find impages for selected product > contains paramId-optionId
 
-            var optionImage = thisProduct.imageWrapper.querySelector(paramId - optionId); //select paramId at formData but only ones contain optionId
+            var optionImage = thisProduct.imageWrapper.querySelector(paramId - optionId);
 
-            var optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+            if (optionImage) {
+              classNames.menuProduct.imageVisible;
 
-            if (optionSelected) {
-              //check if the option is not default, if YES do nothing, but if no -->
-              if (!option["default"]) {
-                console.log('Your order cost:', [orderPrice + option]);
-                orderPrice + option;
-              }
-            } else {
-              // check if the option is default
-              if (option["default"]) {
-                console.log(orderPrice, 'basic pizza set cost 20$');
-              } //get an image to selectec product
+              if (optionSelected) {
+                console.log('');
+              } //select paramId at formData but only ones contain optionId
 
 
-              if (optionImage) {
-                classNames.menuProduct.imageVisible;
+              var optionSelected = formData[paramId] && formData[paramId].includes(optionId);
 
-                if (optionSelected) {
-                  console.log('');
+              if (optionSelected) {
+                //check if the option is not default, if YES do nothing, but if no -->
+                if (!option["default"]) {
+                  console.log('Your order cost:', [orderPrice + option]);
+                  orderPrice + option;
+                }
+              } else {
+                // check if the option is default
+                if (option["default"]) {
+                  console.log(orderPrice, 'basic pizza set cost 20$');
                 }
               }
             }
