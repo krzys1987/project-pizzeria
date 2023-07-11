@@ -174,7 +174,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } //show the product value
 
 
-        var priceElem = select.menuProduct.priceElem; // update calculated price in the HTML
+        var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem); // update calculated price in the HTML
 
         console.log('###', thisProduct, 'priceElem >', select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
         //pick a value from thisProduct classes

@@ -149,17 +149,13 @@
                       price += option.price;
 
                     }
-
                   }
-
-
-
           }
 
         }
 
         //show the product value
-        const priceElem = select.menuProduct.priceElem;
+        const priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
 
         // update calculated price in the HTML
         console.log('###', thisProduct, 'priceElem >', select.menuProduct.priceElem);
