@@ -140,12 +140,13 @@
                   //check if the option is not default, if YES do nothing, but if no --> proceed an action
                   if(!option.default) {
                     console.log('Your order cost:', [orderPrice + option]);
-                    orderPrice + option;
+                    price += option.price;
                     }
                   } else {
                     // check if the option is default
                     if(option.default) {
                       console.log(orderPrice, 'basic pizza set cost 20$');
+                      price += option.price;
 
                     }
 
