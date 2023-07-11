@@ -122,7 +122,7 @@
             let orderPrice = option.price;
 
             //find impages for selected product > contains paramId-optionId
-            const optionImage = thisProduct.imageWrapper.querySelector(paramId-optionId);
+            const optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
             if(optionImage){
               classNames.menuProduct.imageVisible;
               if(optionSelected){
