@@ -134,9 +134,9 @@
                   optionImage.classList.remove(classNames.menuProduct.imageVisible);
                 }
 
-              //check if option is selected --> simply if contains optionSelected 
+              //check if option is selected --> simply if contains optionSelected
               if(optionSelected){
-                //check if the option is not default, if YES do nothing, but if no -->
+                //check if the option is not default, if YES do nothing, but if no --> proceed an action
                 if(!option.default) {
                   console.log('Your order cost:', [orderPrice + option]);
                   orderPrice + option;
