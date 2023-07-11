@@ -121,16 +121,17 @@
             // add option price to price variable --> it's default set
             let orderPrice = option.price;
 
-            //find impages for selected product > contains paramId-optionId
-            const optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
-            if(optionImage){
-              classNames.menuProduct.imageVisible;
-              if(optionSelected){
-                console.log('')
-              }
+
 
             //select paramId at formData but only ones contain optionId
             const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+              //find impages for selected product > contains paramId-optionId
+              const optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
+              if(optionImage){
+              classNames.menuProduct.imageVisible;
+              if(optionSelected){
+              console.log('')
+              }
               //check if option is sectected --> simply if contains optionSelected
               if(optionSelected){
                 //check if the option is not default, if YES do nothing, but if no -->
