@@ -138,41 +138,34 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
             var option = param.options[optionId]; // console.log('option, optionId');
-            // add option price to price variable --> it's default set
-
-            var priceOrder = option.price; //find impages for selected product > contains paramId-optionId
+            //find impages for selected product > contains paramId-optionId
 
             var optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId); //select paramId at formData but only ones contain optionId
 
-            var optionSelected = formData[paramId] && formData[paramId].includes(optionId); //check if option is selected --> simply if contains optionSelected -->add photos
+            var optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+            var isCalculateAllowed = optionSelected && !option["default"]; //check if option is selected --> simply if contains optionSelected -->add photos
+            // if(optionImage){
+            //   if(optionSelected){
+            //     optionImage.classList.add(classNames.menuProduct.imageVisible);
+            //   } else {
+            //     optionImage.classList.remove(classNames.menuProduct.imageVisible);
+            //   }
+            // }
 
             if (optionImage) {
-              if (optionSelected) {
-                optionImage.classList.add(classNames.menuProduct.imageVisible);
-              } else {
-                optionImage.classList.remove(classNames.menuProduct.imageVisible);
-              }
-            } //check if option is selected --> simply if contains optionSelected
+              optionSelected ? optionImage.classList.add(classNames.menuProduct.imageVisible) : optionImage.classList.remove(classNames.menuProduct.imageVisible);
+            }
 
-
-            if (optionSelected) {
-              //check if the option is not default, if YES do nothing, but if no --> proceed an action
-              if (!option["default"]) {
-                // add option price to price variable
-                priceOrder += option.price;
-              }
-            } else {
-              // check if the option is default
-              if (option["default"]) {
-                //reduce price variable
-                priceOrder += option.price;
-              }
+            if (isCalculateAllowed) {
+              price += option.price;
             }
           }
         } //show the product value
 
 
-        var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem); //price operation: put chosen product value and transfer to HTML
+        var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+        thisProduct.element.querySelector(select.menuProduct.priceElem).innerHTML = price;
+        priceElem.innerHTML = price; //price operation: put chosen product value and transfer to HTML
         // thisProduct.priceElem.innerHTML;
         // thisProduct.priceElem.innerHTML = price;
         //pick a value from thisProduct classes

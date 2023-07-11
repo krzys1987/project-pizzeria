@@ -115,37 +115,29 @@
             const option = param.options[optionId];
             // console.log('option, optionId');
 
-            // add option price to price variable --> it's default set
-            let priceOrder = option.price;
-
             //find impages for selected product > contains paramId-optionId
             const optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
 
             //select paramId at formData but only ones contain optionId
             const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+            const isCalculateAllowed = optionSelected && !option.default;
               //check if option is selected --> simply if contains optionSelected -->add photos
+              // if(optionImage){
+              //   if(optionSelected){
+              //     optionImage.classList.add(classNames.menuProduct.imageVisible);
+              //   } else {
+              //     optionImage.classList.remove(classNames.menuProduct.imageVisible);
+              //   }
+              // }
               if(optionImage){
-                if(optionSelected){
-                  optionImage.classList.add(classNames.menuProduct.imageVisible);
-                } else {
-                  optionImage.classList.remove(classNames.menuProduct.imageVisible);
-                }
+                optionSelected
+                ? optionImage.classList.add(classNames.menuProduct.imageVisible)
+                : optionImage.classList.remove(classNames.menuProduct.imageVisible);
               }
 
-              //check if option is selected --> simply if contains optionSelected
-                if(optionSelected){
-                  //check if the option is not default, if YES do nothing, but if no --> proceed an action
-                  if(!option.default) {
-                    // add option price to price variable
-                    priceOrder += option.price;
-                    }
-                  } else {
-                    // check if the option is default
-                    if(option.default) {
-                      //reduce price variable
-                      priceOrder += option.price;
+                if(isCalculateAllowed){
+                  price += option.price;
 
-                    }
                   }
           }
 
@@ -153,6 +145,9 @@
 
         //show the product value
         const priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+
+        thisProduct.element.querySelector(select.menuProduct.priceElem).innerHTML = price;
+        priceElem.innerHTML = price;
 
         //price operation: put chosen product value and transfer to HTML
         // thisProduct.priceElem.innerHTML;
