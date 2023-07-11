@@ -126,7 +126,7 @@
 
             //select paramId at formData but only ones contain optionId
             const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
-            //check if option is selected --> simply if contains optionSelected -->add photos
+              //check if option is selected --> simply if contains optionSelected -->add photos
               if(optionImage){
                 if(optionSelected){
                   optionImage.classList.add(classNames.menuProduct.imageVisible);
@@ -135,24 +135,22 @@
                 }
 
               //check if option is selected --> simply if contains optionSelected
-              if(optionSelected){
-                //check if the option is not default, if YES do nothing, but if no --> proceed an action
-                if(!option.default) {
-                  console.log('Your order cost:', [orderPrice + option]);
-                  orderPrice + option;
-                  }
-                } else {
-                  // check if the option is default
-                  if(option.default) {
-                    console.log(orderPrice, 'basic pizza set cost 20$');
+                if(optionSelected){
+                  //check if the option is not default, if YES do nothing, but if no --> proceed an action
+                  if(!option.default) {
+                    console.log('Your order cost:', [orderPrice + option]);
+                    orderPrice + option;
+                    }
+                  } else {
+                    // check if the option is default
+                    if(option.default) {
+                      console.log(orderPrice, 'basic pizza set cost 20$');
+
+                    }
 
                   }
 
-
-
-                }
-
-            }
+              }
 
           }
 

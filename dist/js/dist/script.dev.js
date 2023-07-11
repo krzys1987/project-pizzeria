@@ -157,7 +157,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
               if (optionSelected) {
-                //check if the option is not default, if YES do nothing, but if no --> 
+                //check if the option is not default, if YES do nothing, but if no --> proceed an action
                 if (!option["default"]) {
                   console.log('Your order cost:', [orderPrice + option]);
                   orderPrice + option;
