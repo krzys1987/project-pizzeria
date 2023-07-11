@@ -158,13 +158,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             if (optionSelected) {
               //check if the option is not default, if YES do nothing, but if no --> proceed an action
               if (!option["default"]) {
-                // console.log('Your order cost:', [orderPrice + option]);
+                // add option price to price variable
                 price += option.price;
               }
             } else {
               // check if the option is default
               if (option["default"]) {
-                // console.log(orderPrice, 'basic pizza set cost 20$');
+                //reduce price variable
                 price += option.price;
               }
             }
