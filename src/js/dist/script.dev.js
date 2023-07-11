@@ -144,7 +144,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
             var orderPrice = option.price; //find impages for selected product > contains paramId-optionId
 
-            var optionImage = thisProduct.imageWrapper.querySelector(paramId - optionId);
+            var optionImage = thisProduct.imageWrapper.querySelector('.', paramId + '-' + optionId);
 
             if (optionImage) {
               classNames.menuProduct.imageVisible;
