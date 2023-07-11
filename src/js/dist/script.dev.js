@@ -154,7 +154,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               } //select paramId at formData but only ones contain optionId
 
 
-              var optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+              var optionSelected = formData[paramId] && formData[paramId].includes(optionId); //check if option is sectected --> simply if contains optionSelected
 
               if (optionSelected) {
                 //check if the option is not default, if YES do nothing, but if no -->
