@@ -115,9 +115,6 @@
             const option = param.options[optionId];
             // console.log('option, optionId');
 
-            // set price to default price --> 'let' variable to - or + its value
-            // let price = thisProduct.data.price;
-
             // add option price to price variable --> it's default set
             let orderPrice = option.price;
 
@@ -139,13 +136,13 @@
                 if(optionSelected){
                   //check if the option is not default, if YES do nothing, but if no --> proceed an action
                   if(!option.default) {
-                    console.log('Your order cost:', [orderPrice + option]);
+                    // console.log('Your order cost:', [orderPrice + option]);
                     price += option.price;
                     }
                   } else {
                     // check if the option is default
                     if(option.default) {
-                      console.log(orderPrice, 'basic pizza set cost 20$');
+                      // console.log(orderPrice, 'basic pizza set cost 20$');
                       price += option.price;
 
                     }
