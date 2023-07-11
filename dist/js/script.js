@@ -133,6 +133,7 @@
                 } else {
                   optionImage.classList.remove(classNames.menuProduct.imageVisible);
                 }
+              }
 
               //check if option is selected --> simply if contains optionSelected
                 if(optionSelected){
@@ -150,7 +151,7 @@
 
                   }
 
-              }
+
 
           }
 
