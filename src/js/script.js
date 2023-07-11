@@ -154,15 +154,13 @@
         //show the product value
         const priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
 
-        // update calculated price in the HTML
-        console.log('###', thisProduct, 'priceElem >', select.menuProduct.priceElem);
         // thisProduct.priceElem.innerHTML = price;
 
         //pick a value from thisProduct classes
-        const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
+        // const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
 
-        //put chosen products prices to HTML
-        const priceHTML = yourChosenproducts.innerHTML;
+        //price operation: put chosen product value and transfer to HTML
+        const priceHTML = priceElem.innerHTML;
 
         //[DONE ALREADY] set a price variable
 

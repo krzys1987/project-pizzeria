@@ -172,14 +172,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } //show the product value
 
 
-        var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem); // update calculated price in the HTML
-
-        console.log('###', thisProduct, 'priceElem >', select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
+        var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
         //pick a value from thisProduct classes
+        // const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
+        //price operation: put chosen product value and transfer to HTML
 
-        var yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem); //put chosen products prices to HTML
-
-        var priceHTML = yourChosenproducts.innerHTML; //[DONE ALREADY] set a price variable
+        var priceHTML = priceElem.innerHTML; //[DONE ALREADY] set a price variable
       }
     }, {
       key: "renderInMenu",
