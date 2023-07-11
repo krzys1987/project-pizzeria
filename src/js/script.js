@@ -116,7 +116,7 @@
             // console.log('option, optionId');
 
             // add option price to price variable --> it's default set
-            let orderPrice = option.price;
+            let priceOrder = option.price;
 
             //find impages for selected product > contains paramId-optionId
             const optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
@@ -137,13 +137,13 @@
                   //check if the option is not default, if YES do nothing, but if no --> proceed an action
                   if(!option.default) {
                     // add option price to price variable
-                    price += option.price;
+                    priceOrder += option.price;
                     }
                   } else {
                     // check if the option is default
                     if(option.default) {
                       //reduce price variable
-                      price += option.price;
+                      priceOrder += option.price;
 
                     }
                   }
@@ -154,13 +154,13 @@
         //show the product value
         const priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
 
+        //price operation: put chosen product value and transfer to HTML
+        // thisProduct.priceElem.innerHTML;
+
         // thisProduct.priceElem.innerHTML = price;
 
         //pick a value from thisProduct classes
         // const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
-
-        //price operation: put chosen product value and transfer to HTML
-        const priceHTML = priceElem.innerHTML;
 
         //[DONE ALREADY] set a price variable
 

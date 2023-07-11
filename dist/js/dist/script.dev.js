@@ -140,7 +140,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var option = param.options[optionId]; // console.log('option, optionId');
             // add option price to price variable --> it's default set
 
-            var orderPrice = option.price; //find impages for selected product > contains paramId-optionId
+            var priceOrder = option.price; //find impages for selected product > contains paramId-optionId
 
             var optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId); //select paramId at formData but only ones contain optionId
 
@@ -159,25 +159,25 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               //check if the option is not default, if YES do nothing, but if no --> proceed an action
               if (!option["default"]) {
                 // add option price to price variable
-                price += option.price;
+                priceOrder += option.price;
               }
             } else {
               // check if the option is default
               if (option["default"]) {
                 //reduce price variable
-                price += option.price;
+                priceOrder += option.price;
               }
             }
           }
         } //show the product value
 
 
-        var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem); // thisProduct.priceElem.innerHTML = price;
+        var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem); //price operation: put chosen product value and transfer to HTML
+        // thisProduct.priceElem.innerHTML;
+        // thisProduct.priceElem.innerHTML = price;
         //pick a value from thisProduct classes
         // const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
-        //price operation: put chosen product value and transfer to HTML
-
-        var priceHTML = priceElem.innerHTML; //[DONE ALREADY] set a price variable
+        //[DONE ALREADY] set a price variable
       }
     }, {
       key: "renderInMenu",
