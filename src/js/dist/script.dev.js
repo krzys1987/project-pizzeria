@@ -142,18 +142,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             // let price = thisProduct.data.price;
             // add option price to price variable --> it's default set
 
-            var orderPrice = option.price; //select paramId at formData but only ones contain optionId
+            var orderPrice = option.price; //find impages for selected product > contains paramId-optionId
 
-            var optionSelected = formData[paramId] && formData[paramId].includes(optionId); //find impages for selected product > contains paramId-optionId
+            var optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId); //select paramId at formData but only ones contain optionId
 
-            var optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
+            var optionSelected = formData[paramId] && formData[paramId].includes(optionId); //check if option is selected --> simply if contains optionSelected -->add photos
 
             if (optionImage) {
-              classNames.menuProduct.imageVisible;
-
               if (optionSelected) {
-                console.log('');
-              } //check if option is sectected --> simply if contains optionSelected
+                optionImage.classList.add(classNames.menuProduct.imageVisible);
+              } else {
+                optionImage.classList.remove(classNames.menuProduct.imageVisible);
+              } //check if option is selected --> simply if contains optionSelected 
 
 
               if (optionSelected) {
