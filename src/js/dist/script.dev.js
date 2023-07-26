@@ -280,5 +280,4 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   app.initData;
   app.initMenu;
   app.init();
-  gi;
 }
