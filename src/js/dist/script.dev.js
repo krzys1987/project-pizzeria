@@ -71,13 +71,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.getElements();
       this.initAccordion();
       this.initOrderForm();
-      this.initAmountWidget(); //widget which enable + and  - buttom in oder menu
-
+      this.initAmountWidget();
       this.processOrder();
       console.log('PRODUCT', this);
       console.log('new Product:', thisProduct);
-    } //initOrderForm --> select product to buy
-
+    }
 
     _createClass(Product, [{
       key: "initOrderForm",
@@ -116,7 +114,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         thisProduct.cartButton.addEventListener('click', function (event) {
           event.preventDefault();
-          thisProduct.processOrder(); // console.log('add to your order');
+          thisProduct.processOrder();
         });
       }
     }, {
@@ -131,14 +129,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         for (var paramId in thisProduct.data.params) {
           //set params value > paramId = 'toppings', param = { label: 'Toppings', type: 'checkboxes'... }
-          var param = thisProduct.data.params[paramId]; // console.log('paramId, param', paramId, param);
-          //a loop within every product opions in chosen category
-          //[IN PROGRESS] decrease/increase thisProduct price
+          var param = thisProduct.data.params[paramId]; //a loop within every product opions in chosen category
+          //[DONE] decrease/increase thisProduct price
 
           for (var optionId in param.options) {
             //set options value > optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
-            var option = param.options[optionId]; // console.log('option, optionId');
-            //find impages for selected product > contains paramId-optionId
+            var option = param.options[optionId]; //find impages for selected product > contains paramId-optionId
 
             var optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId); //select paramId at formData but only ones contain optionId
 
@@ -246,7 +242,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
     thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
     console.log('AmountWidget', this);
-    console.log('contructor arg', element);
+    console.log('contructor arg' + ' ' + 'Show HTML', element);
   };
 
   var app = {
