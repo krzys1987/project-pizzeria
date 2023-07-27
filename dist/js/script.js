@@ -59,7 +59,7 @@
         const thisProduct = this;
         this.id = id;
         this.data = data;
-        this.renderInMenu();
+        this.renderInMenu(); //function set properties of thisProduct.element
         this.getElements();
         this.initAccordion();
         this.initOrderForm();
