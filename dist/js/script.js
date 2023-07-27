@@ -66,8 +66,10 @@
         this.initAmountWidget();
         this.processOrder();
 
-       console.log('PRODUCT', this)
+
+        console.log('PRODUCT', this)
         console.log('new Product:', thisProduct);
+        // console.log('###'+''+this.initAmountWidget);
       }
 
       initOrderForm(){
@@ -174,6 +176,8 @@
         /* add element to menu */
         menuContainer.appendChild(thisProduct.element);
 
+
+
       }
 
       /* find elements in Product container */
@@ -189,9 +193,12 @@
         thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, - . SelectAll might cause chose other product div
       }
 
+
       initAmountWidget(){
         const thisProduct = this;
-        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); //create a new instance and give it a reference to div with buttons: -, +
+        //create a new instance and give it a reference to div with buttons: -, +
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+
       }
 
       initAccordion(){
@@ -217,9 +224,12 @@
       }
     }
 
+
     class AmountWidget {
       constructor(element){
         const thisWidget = this;
+        // thisWidget.getElements(element);
+
         //getElements(element) --> function into the methood
         thisWidget.element = element;
         thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);

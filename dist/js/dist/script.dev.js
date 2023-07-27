@@ -75,7 +75,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       this.initAmountWidget();
       this.processOrder();
       console.log('PRODUCT', this);
-      console.log('new Product:', thisProduct);
+      console.log('new Product:', thisProduct); // console.log('###'+''+this.initAmountWidget);
     }
 
     _createClass(Product, [{
@@ -205,8 +205,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }, {
       key: "initAmountWidget",
       value: function initAmountWidget() {
-        var thisProduct = this;
-        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); //create a new instance and give it a reference to div with buttons: -, +
+        var thisProduct = this; //create a new instance and give it a reference to div with buttons: -, +
+
+        thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
       }
     }, {
       key: "initAccordion",
@@ -236,7 +237,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   var AmountWidget = function AmountWidget(element) {
     _classCallCheck(this, AmountWidget);
 
-    var thisWidget = this; //getElements(element) --> function into the methood
+    var thisWidget = this; // thisWidget.getElements(element);
+    //getElements(element) --> function into the methood
 
     thisWidget.element = element;
     thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
