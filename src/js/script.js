@@ -232,6 +232,7 @@
 
         //getElements(element) --> function into the methood
         thisWidget.element = element;
+        thisWidget.setValue(thisWidget.input.value);
         thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
         thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
         thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
