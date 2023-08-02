@@ -257,7 +257,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       key: "setValue",
       value: function setValue(value) {
         var thisWidget = this;
-        var newValue = parseInt(value); //[IN PROGRESS] Add validation
+        var newValue = parseInt(value); //parseInt convert text to numbers
+        //[IN PROGRESS] Add validation
 
         thisWidget.value = newValue;
         thisWidget.input.value = thisWidget.value;

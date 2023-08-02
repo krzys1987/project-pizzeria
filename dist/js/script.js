@@ -243,7 +243,7 @@
       //set an order value
       setValue(value){
         const thisWidget = this;
-        const newValue = parseInt(value);
+        const newValue = parseInt(value); //parseInt convert text to numbers
 
         //[IN PROGRESS] Add validation
 
