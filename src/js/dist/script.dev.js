@@ -244,8 +244,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       //getElements(element) --> function into the methood
 
       thisWidget.element = element;
-      thisWidget.setValue(thisWidget.input.value);
       thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
+      thisWidget.setValue(thisWidget.input.value);
       thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
       thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
       thisWidget.setValue;
