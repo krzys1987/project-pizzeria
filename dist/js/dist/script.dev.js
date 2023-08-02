@@ -262,7 +262,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         /* TODO: Add validation */
 
-        if (thisWidget.value !== newValue && newValue != null) {
+        if (thisWidget.value !== newValue && !isNaN(newValue)) {
+          //check value and convert to number if needed
           thisWidget.value = newValue;
         }
 

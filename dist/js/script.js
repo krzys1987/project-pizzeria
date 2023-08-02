@@ -246,9 +246,8 @@
         const newValue = parseInt(value); //parseInt convert text to numbers
 
         //[IN PROGRESS] Add validation
-
         /* TODO: Add validation */
-        if(thisWidget.value !== newValue && newValue != null) {
+        if(thisWidget.value !== newValue && !isNaN(newValue)) { //check value and convert to number if needed
           thisWidget.value = newValue;
         }
 
