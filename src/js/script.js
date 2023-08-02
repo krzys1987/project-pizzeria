@@ -247,7 +247,11 @@
 
         //[IN PROGRESS] Add validation
 
-        thisWidget.value = newValue;
+        /* TODO: Add validation */
+        if(thisWidget.value !== newValue) {
+          thisWidget.value = newValue;
+        }
+
         thisWidget.input.value = thisWidget.value;
       }
     }
