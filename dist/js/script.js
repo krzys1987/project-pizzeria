@@ -235,10 +235,25 @@
         thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
         thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
         thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
+        thisWidget.setValue;
         console.log('AmountWidget', this);
         console.log('contructor arg' + ' ' + 'Show HTML', element);
       }
+
+      //set an order value
+      setValue(value){
+        const thisWidget = this;
+        const newValue = parseInt(value);
+
+        //[IN PROGRESS] Add validation
+
+        thisWidget.value = newValue;
+        thisWidget.input.value = thisWidget.value;
+      }
     }
+
+    //execute thisWidget.element --> add a product and change price by click + or -
+    // AmountWidget.thisWidget.element;
 
     const app = {
 

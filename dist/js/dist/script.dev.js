@@ -234,19 +234,40 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     return Product;
   }();
 
-  var AmountWidget = function AmountWidget(element) {
-    _classCallCheck(this, AmountWidget);
+  var AmountWidget =
+  /*#__PURE__*/
+  function () {
+    function AmountWidget(element) {
+      _classCallCheck(this, AmountWidget);
 
-    var thisWidget = this; // thisWidget.getElements(element);
-    //getElements(element) --> function into the methood
+      var thisWidget = this; // thisWidget.getElements(element);
+      //getElements(element) --> function into the methood
 
-    thisWidget.element = element;
-    thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
-    thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
-    thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
-    console.log('AmountWidget', this);
-    console.log('contructor arg' + ' ' + 'Show HTML', element);
-  };
+      thisWidget.element = element;
+      thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
+      thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
+      thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
+      thisWidget.setValue;
+      console.log('AmountWidget', this);
+      console.log('contructor arg' + ' ' + 'Show HTML', element);
+    } //set an order value
+
+
+    _createClass(AmountWidget, [{
+      key: "setValue",
+      value: function setValue(value) {
+        var thisWidget = this;
+        var newValue = parseInt(value); //[IN PROGRESS] Add validation
+
+        thisWidget.value = newValue;
+        thisWidget.input.value = thisWidget.value;
+      }
+    }]);
+
+    return AmountWidget;
+  }(); //execute thisWidget.element --> add a product and change price by click + or -
+  // AmountWidget.thisWidget.element;
+
 
   var app = {
     initData: function initData() {
