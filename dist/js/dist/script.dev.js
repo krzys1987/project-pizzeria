@@ -262,7 +262,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         /* TODO: Add validation */
 
-        if (thisWidget.value !== newValue) {
+        if (thisWidget.value !== newValue && newValue != null) {
           thisWidget.value = newValue;
         }
 

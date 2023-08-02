@@ -248,7 +248,7 @@
         //[IN PROGRESS] Add validation
 
         /* TODO: Add validation */
-        if(thisWidget.value !== newValue) {
+        if(thisWidget.value !== newValue && newValue != null) {
           thisWidget.value = newValue;
         }
 
