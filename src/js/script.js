@@ -184,6 +184,17 @@
       getElements(){
         const thisProduct = this;
 
+        // const thisProduct.dom = {
+        //   accordionTrigger: thisProduct.element.querySelector(select.menuProduct.clickable),
+        //   form: thisProduct.element.querySelector(select.menuProduct.form),
+        //   formInputs: thisProduct.form.querySelectorAll(select.all.formInputs),
+        //   cartButton: thisProduct.element.querySelector(select.menuProduct.cartButton),
+        //   priceElem: thisProduct.element.querySelector(select.menuProduct.price),
+        //   imageWrapper: thisProduct.element.querySelector(select.menuProduct.imageWrapper),
+        //   thisProduct.amountWidgetElem: thisProduct.element.querySelector(select.menuProduct.amountWidget),
+
+        // }
+
         thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
         thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
