@@ -274,14 +274,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     return AmountWidget;
   }();
 
-  var Cart = function Cart(element) {
-    _classCallCheck(this, Cart);
+  var Cart =
+  /*#__PURE__*/
+  function () {
+    function Cart(element) {
+      _classCallCheck(this, Cart);
 
-    var thisCart = this;
-    thisCart.products = [];
-    thisCart.getElements(element);
-    console.log('thisCart', thisCart);
-  }; //execute thisWidget.element --> add a product and change price by click + or -
+      var thisCart = this;
+      thisCart.products = [];
+      thisCart.getElements(element);
+      console.log('thisCart', thisCart);
+    }
+
+    _createClass(Cart, [{
+      key: "getElements",
+      value: function getElements(element) {
+        var thisCart = this;
+        thisCart.dom = {};
+        thisCart.dom.wrapper = element;
+      }
+    }]);
+
+    return Cart;
+  }(); //execute thisWidget.element --> add a product and change price by click + or -
   // AmountWidget.thisWidget.element;
 
 

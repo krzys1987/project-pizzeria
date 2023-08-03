@@ -266,6 +266,14 @@
 
       }
 
+      getElements(element){
+        const thisCart = this;
+
+        thisCart.dom = {};
+
+        thisCart.dom.wrapper = element;
+
+      }
 
     }
     //execute thisWidget.element --> add a product and change price by click + or -
