@@ -192,7 +192,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }, {
       key: "getElements",
       value: function getElements() {
-        var thisProduct = this;
+        var thisProduct = this; // const thisProduct.dom = {
+        //   accordionTrigger: thisProduct.element.querySelector(select.menuProduct.clickable),
+        //   form: thisProduct.element.querySelector(select.menuProduct.form),
+        //   formInputs: thisProduct.form.querySelectorAll(select.all.formInputs),
+        //   cartButton: thisProduct.element.querySelector(select.menuProduct.cartButton),
+        //   priceElem: thisProduct.element.querySelector(select.menuProduct.price),
+        //   imageWrapper: thisProduct.element.querySelector(select.menuProduct.imageWrapper),
+        //   thisProduct.amountWidgetElem: thisProduct.element.querySelector(select.menuProduct.amountWidget),
+        // }
+
         thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
         thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
@@ -272,6 +281,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }]);
 
     return AmountWidget;
+  }();
+
+  var Cart =
+  /*#__PURE__*/
+  function () {
+    function Cart(element) {
+      _classCallCheck(this, Cart);
+
+      var thisCart = this;
+      thisCart.products = [];
+      thisCart.getElements(element);
+      console.log('thisCart', thisCart);
+    }
+
+    _createClass(Cart, [{
+      key: "getElements",
+      value: function getElements(element) {
+        var thisCart = this; //create an object to hide dom properties inside aterwards
+
+        thisCart.dom = {};
+        thisCart.dom.wrapper = element;
+      }
+    }]);
+
+    return Cart;
   }(); //execute thisWidget.element --> add a product and change price by click + or -
   // AmountWidget.thisWidget.element;
 

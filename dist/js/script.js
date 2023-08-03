@@ -184,6 +184,17 @@
       getElements(){
         const thisProduct = this;
 
+        // const thisProduct.dom = {
+        //   accordionTrigger: thisProduct.element.querySelector(select.menuProduct.clickable),
+        //   form: thisProduct.element.querySelector(select.menuProduct.form),
+        //   formInputs: thisProduct.form.querySelectorAll(select.all.formInputs),
+        //   cartButton: thisProduct.element.querySelector(select.menuProduct.cartButton),
+        //   priceElem: thisProduct.element.querySelector(select.menuProduct.price),
+        //   imageWrapper: thisProduct.element.querySelector(select.menuProduct.imageWrapper),
+        //   thisProduct.amountWidgetElem: thisProduct.element.querySelector(select.menuProduct.amountWidget),
+
+        // }
+
         thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
         thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
         thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
@@ -255,6 +266,28 @@
       }
     }
 
+    class Cart {
+      constructor(element){
+        const thisCart = this;
+
+        thisCart.products = [];
+        thisCart.getElements(element);
+
+        console.log('thisCart', thisCart);
+
+      }
+
+      getElements(element){
+        const thisCart = this;
+
+        //create an object to hide dom properties inside aterwards
+        thisCart.dom = {};
+
+        thisCart.dom.wrapper = element;
+
+      }
+
+    }
     //execute thisWidget.element --> add a product and change price by click + or -
     // AmountWidget.thisWidget.element;
 
