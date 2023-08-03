@@ -258,14 +258,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
       thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
       console.log('AmountWidget', this);
-      console.log('contructor arg' + ' ' + 'Show HTML', element); //thisWidget - +
-
-      thisWidget.linkDecrease.addEventListener('click', function () {
-        return console.log("###minus###") && select.templateOf.widgets.amount.linkDecrease(1);
-      });
-      thisWidget.linkIncrease.addEventListener('click', function () {
-        return console.log("###plus###") && select.templateOf.widgets.amount.linkIncrease(1);
-      });
+      console.log('contructor arg' + ' ' + 'Show HTML', element);
     } //set an order value
 
 

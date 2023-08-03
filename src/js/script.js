@@ -250,20 +250,10 @@
         console.log('AmountWidget', this);
         console.log('contructor arg' + ' ' + 'Show HTML', element);
 
-         //thisWidget - +
-        thisWidget.linkDecrease.addEventListener('click', () =>
-          console.log("###minus###") && select.templateOf.widgets.amount.linkDecrease(1)
-        );
 
-        thisWidget.linkIncrease.addEventListener('click', () =>
-        console.log("###plus###") && select.templateOf.widgets.amount.linkIncrease(1)
-        );
+
+
       }
-
-
-
-
-
 
       //set an order value
       setValue(value){
@@ -278,6 +268,20 @@
 
         thisWidget.input.value = thisWidget.value;
       }
+    }
+
+    class initAction{
+      //add event reaction, enable  widget -+
+      thisWidget.input.addEventListener('change', setValue(thisWidget.input));
+
+      thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
+       console.log("###minus###") /* && select.templateOf.widgets.amount.linkDecrease(1) */
+       );
+
+       thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
+       console.log("###plus###") /* && select.templateOf.widgets.amount.linkIncrease(1) */
+       );
+
     }
 
     class Cart {
