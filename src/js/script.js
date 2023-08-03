@@ -236,7 +236,6 @@
         thisWidget.setValue(thisWidget.input.value);
         thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
         thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
-        thisWidget.setValue;
         console.log('AmountWidget', this);
         console.log('contructor arg' + ' ' + 'Show HTML', element);
       }
