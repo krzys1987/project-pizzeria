@@ -272,7 +272,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }]);
 
     return AmountWidget;
-  }(); //execute thisWidget.element --> add a product and change price by click + or -
+  }();
+
+  var Cart = function Cart(element) {
+    _classCallCheck(this, Cart);
+
+    var thisCart = this;
+    thisCart.products = [];
+    thisCart.getElements(element);
+    console.log('thisCart', thisCart);
+  }; //execute thisWidget.element --> add a product and change price by click + or -
   // AmountWidget.thisWidget.element;
 
 

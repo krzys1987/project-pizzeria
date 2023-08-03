@@ -255,6 +255,19 @@
       }
     }
 
+    class Cart {
+      constructor(element){
+        const thisCart = this;
+
+        thisCart.products = [];
+        thisCart.getElements(element);
+
+        console.log('thisCart', thisCart);
+
+      }
+
+
+    }
     //execute thisWidget.element --> add a product and change price by click + or -
     // AmountWidget.thisWidget.element;
 
