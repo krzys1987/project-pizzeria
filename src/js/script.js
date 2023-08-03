@@ -269,6 +269,7 @@
       getElements(element){
         const thisCart = this;
 
+        //create an object to hide dom properties inside aterwards
         thisCart.dom = {};
 
         thisCart.dom.wrapper = element;

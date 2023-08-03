@@ -289,7 +289,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     _createClass(Cart, [{
       key: "getElements",
       value: function getElements(element) {
-        var thisCart = this;
+        var thisCart = this; //create an object to hide dom properties inside aterwards
+
         thisCart.dom = {};
         thisCart.dom.wrapper = element;
       }
