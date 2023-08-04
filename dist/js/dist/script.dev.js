@@ -277,46 +277,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           thisWidget.value = newValue;
         }
 
-        thisWidget.input.value = thisWidget.value;
-      } // //thisWidget - +
-      // thisWidget.linkDecrease.addEventListener('click', () =>
-      // console.log("###minus###") && select.templateOf.widgets.amount.linkDecrease(1)
-      // );
-      // thisWidget.linkIncrease.addEventListener('click', () =>
-      // console.log("###plus###") && select.templateOf.widgets.amount.linkIncrease(1)
-      // );
-      // }
-      // class initAction(){
-      //   //add event reaction, enable  widget -+
-      //   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
-      //   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
-      //    console.log("###minus###");
-      //    );
-      //    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
-      //    console.log("###plus###");
-      //    );
-      // }
-      // initWatchers(){
-      //   const thisWidget = this;
-      //   if (this.linkIncrease) {
-      //     this.linkIncrease.addEventListener('click', () => {
-      //       const newValue = thisWidget.value + 1; // +1
-      //       if (newValue <= settings.amountWidget.defaultMax) {
-      //         thisWidget.setValue(newValue);
-      //       }
-      //     })
-      //   }
-      //   if (this.linkDecrease) {
-      //     this.linkDecrease.addEventListener('click', () => {
-      //       console.log('linkDecrease')
-      //       const newValue = thisWidget.value - 1; // -1
-      //       if (newValue >= settings.amountWidget.defaultMin) {
-      //         thisWidget.setValue(newValue);
-      //       }
-      //     })
-      //   }
-      // }
-      // class Cart {
+        thisWidget.input.value = thisWidget.value; //   // class initAction(){
+        //   //   //add event reaction, enable  widget -+
+        //   //   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
+        //   //   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
+        //   //    console.log("###minus###");
+        //   //    );
+        //   //    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
+        //   //    console.log("###plus###");
+        //   //    );
+        //   // }
+      }
+    }, {
+      key: "initWatchers",
+      value: function initWatchers() {
+        var thisWidget = this;
+
+        if (this.linkIncrease) {
+          this.linkIncrease.addEventListener('click', function () {
+            var newValue = thisWidget.value + 1; // +1
+
+            if (newValue <= settings.amountWidget.defaultMax) {
+              thisWidget.setValue(newValue);
+            }
+          });
+        }
+
+        if (this.linkDecrease) {
+          this.linkDecrease.addEventListener('click', function () {
+            console.log('linkDecrease');
+            var newValue = thisWidget.value - 1; // -1
+
+            if (newValue >= settings.amountWidget.defaultMin) {
+              thisWidget.setValue(newValue);
+            }
+          });
+        }
+      } // class Cart {
       //   constructor(element){
       //     const thisCart = this;
       //     thisCart.products = [];
