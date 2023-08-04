@@ -259,6 +259,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
       console.log('AmountWidget', this);
       console.log('contructor arg' + ' ' + 'Show HTML', element);
+      thisWidget.initWatchers;
     } //set an order value
 
 
@@ -281,7 +282,41 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     }]);
 
     return AmountWidget;
-  }();
+  }(); // class initAction(){
+  //   //add event reaction, enable  widget -+
+  //   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
+  //   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
+  //    console.log("###minus###") /* && select.templateOf.widgets.amount.linkDecrease(1) */
+  //    );
+  //    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
+  //    console.log("###plus###") /* && select.templateOf.widgets.amount.linkIncrease(1) */
+  //    );
+  // }
+
+
+  initWatchers();
+  var thisWidget = void 0;
+
+  if ((void 0).linkIncrease) {
+    (void 0).linkIncrease.addEventListener('click', function () {
+      var newValue = thisWidget.value + 1; // +1
+
+      if (newValue <= settings.amountWidget.defaultMax) {
+        thisWidget.setValue(newValue);
+      }
+    });
+  }
+
+  if ((void 0).linkDecrease) {
+    (void 0).linkDecrease.addEventListener('click', function () {
+      console.log('linkDecrease');
+      var newValue = thisWidget.value - 1; // -1
+
+      if (newValue >= settings.amountWidget.defaultMin) {
+        thisWidget.setValue(newValue);
+      }
+    });
+  }
 
   var Cart =
   /*#__PURE__*/

@@ -249,6 +249,7 @@
         thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
         console.log('AmountWidget', this);
         console.log('contructor arg' + ' ' + 'Show HTML', element);
+        thisWidget.initWatchers;
 
 
 
@@ -270,19 +271,47 @@
       }
     }
 
-    class initAction{
-      //add event reaction, enable  widget -+
-      thisWidget.input.addEventListener('change', setValue(thisWidget.input));
+    // class initAction(){
+    //   //add event reaction, enable  widget -+
+    //   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
 
-      thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
-       console.log("###minus###") /* && select.templateOf.widgets.amount.linkDecrease(1) */
-       );
+    //   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
+    //    console.log("###minus###") /* && select.templateOf.widgets.amount.linkDecrease(1) */
+    //    );
 
-       thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
-       console.log("###plus###") /* && select.templateOf.widgets.amount.linkIncrease(1) */
-       );
+    //    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
+    //    console.log("###plus###") /* && select.templateOf.widgets.amount.linkIncrease(1) */
+    //    );
 
+    // }
+
+    initWatchers(){
+      const thisWidget = this;
+
+      if (this.linkIncrease) {
+        this.linkIncrease.addEventListener('click', () =>  {
+          const newValue = thisWidget.value + 1; // +1
+
+          if (newValue <= settings.amountWidget.defaultMax) {
+            thisWidget.setValue(newValue);
+          }
+        })
+      }
+
+
+      if (this.linkDecrease) {
+        this.linkDecrease.addEventListener('click', () => {
+          console.log('linkDecrease')
+
+          const newValue = thisWidget.value - 1; // -1
+
+          if (newValue >= settings.amountWidget.defaultMin) {
+            thisWidget.setValue(newValue);
+          }
+        })
+      }
     }
+
 
     class Cart {
       constructor(element){
