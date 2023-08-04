@@ -251,9 +251,6 @@
         console.log('contructor arg' + ' ' + 'Show HTML', element);
         thisWidget.initWatchers;
 
-
-
-
       }
 
       //set an order value
@@ -269,70 +266,80 @@
 
         thisWidget.input.value = thisWidget.value;
       }
-    }
+
+    // //thisWidget - +
+    // thisWidget.linkDecrease.addEventListener('click', () =>
+    // console.log("###minus###") && select.templateOf.widgets.amount.linkDecrease(1)
+    // );
+
+    // thisWidget.linkIncrease.addEventListener('click', () =>
+    // console.log("###plus###") && select.templateOf.widgets.amount.linkIncrease(1)
+    // );
+    // }
+
 
     // class initAction(){
     //   //add event reaction, enable  widget -+
     //   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
 
     //   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
-    //    console.log("###minus###") /* && select.templateOf.widgets.amount.linkDecrease(1) */
+    //    console.log("###minus###");
     //    );
 
     //    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
-    //    console.log("###plus###") /* && select.templateOf.widgets.amount.linkIncrease(1) */
+    //    console.log("###plus###");
     //    );
 
     // }
 
-    initWatchers(){
-      const thisWidget = this;
+    // initWatchers(){
+    //   const thisWidget = this;
 
-      if (this.linkIncrease) {
-        this.linkIncrease.addEventListener('click', () =>  {
-          const newValue = thisWidget.value + 1; // +1
+    //   if (this.linkIncrease) {
+    //     this.linkIncrease.addEventListener('click', () => {
+    //       const newValue = thisWidget.value + 1; // +1
 
-          if (newValue <= settings.amountWidget.defaultMax) {
-            thisWidget.setValue(newValue);
-          }
-        })
-      }
-
-
-      if (this.linkDecrease) {
-        this.linkDecrease.addEventListener('click', () => {
-          console.log('linkDecrease')
-
-          const newValue = thisWidget.value - 1; // -1
-
-          if (newValue >= settings.amountWidget.defaultMin) {
-            thisWidget.setValue(newValue);
-          }
-        })
-      }
-    }
+    //       if (newValue <= settings.amountWidget.defaultMax) {
+    //         thisWidget.setValue(newValue);
+    //       }
+    //     })
+    //   }
 
 
-    class Cart {
-      constructor(element){
-        const thisCart = this;
+    //   if (this.linkDecrease) {
+    //     this.linkDecrease.addEventListener('click', () => {
+    //       console.log('linkDecrease')
 
-        thisCart.products = [];
-        thisCart.getElements(element);
+    //       const newValue = thisWidget.value - 1; // -1
 
-        console.log('thisCart', thisCart);
+    //       if (newValue >= settings.amountWidget.defaultMin) {
+    //         thisWidget.setValue(newValue);
+    //       }
+    //     })
+    //   }
+    // }
 
-      }
 
-      getElements(element){
-        const thisCart = this;
+    // class Cart {
+    //   constructor(element){
+    //     const thisCart = this;
 
-        //create an object to hide dom properties inside aterwards
-        thisCart.dom = {};
+    //     thisCart.products = [];
+    //     thisCart.getElements(element);
 
-        thisCart.dom.wrapper = element;
+    //     console.log('thisCart', thisCart);
 
-      }
+    //   }
+
+    //   getElements(element){
+    //     const thisCart = this;
+
+    //     //create an object to hide dom properties inside aterwards
+    //     thisCart.dom = {};
+
+    //     thisCart.dom.wrapper = element;
+
+    //   }
 
     }
     //execute thisWidget.element --> add a product and change price by click + or -
