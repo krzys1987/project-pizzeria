@@ -258,13 +258,13 @@
         const thisWidget = this;
         const newValue = parseInt(value); //parseInt convert text to numbers
 
-        //[IN PROGRESS] Add validation
-        /* TODO: Add validation */
-        if(thisWidget.value !== newValue && !isNaN(newValue)) { //check value and convert to number if needed
+        /* [DONE] Add validation - check value and convert to number if needed */
+        if(thisWidget.value !== newValue && !isNaN(newValue)) {
           thisWidget.value = newValue;
         }
 
         thisWidget.input.value = thisWidget.value;
+      }
 
       //   // class initAction(){
       //   //   //add event reaction, enable  widget -+
@@ -279,33 +279,49 @@
       //   //    );
 
       //   // }
-      }
+
 
     initWatchers(){
       const thisWidget = this;
 
-      if (this.linkIncrease) {
-        this.linkIncrease.addEventListener('click', () => {
-          const newValue = thisWidget.value + 1; // +1
-
-          if (newValue <= settings.amountWidget.defaultMax) {
-            thisWidget.setValue(newValue);
-          }
-        })
-      }
+      thisWidget.linkIncrease.addEventListener('click', () => {
+        thisWidget.setValue(thisWidget.value + 1)
+      });
 
 
-      if (this.linkDecrease) {
-        this.linkDecrease.addEventListener('click', () => {
-          console.log('linkDecrease')
+      thisWidget.linkDecrease.addEventListener('click', () => {
+        thisWidget.setValue(thisWidget.value - 1)
+      })
 
-          const newValue = thisWidget.value - 1; // -1
+      //what do I do here?
+      thisWidget.input.addEventListener('change', () => {
+        thisWidget.setValue(thisWidget.input.value);
+      });
 
-          if (newValue >= settings.amountWidget.defaultMin) {
-            thisWidget.setValue(newValue);
-          }
-        })
-      }
+
+
+      // if (this.linkIncrease) {
+      //   this.linkIncrease.addEventListener('click', () => {
+      //     const newValue = thisWidget.value + 1; // +1
+
+      //     if (newValue <= settings.amountWidget.defaultMax) {
+      //       thisWidget.setValue(newValue);
+      //     }
+      //   })
+      // }
+
+
+      // if (this.linkDecrease) {
+      //   this.linkDecrease.addEventListener('click', () => {
+      //     console.log('linkDecrease')
+
+      //     const newValue = thisWidget.value - 1; // -1
+
+      //     if (newValue >= settings.amountWidget.defaultMin) {
+      //       thisWidget.setValue(newValue);
+      //     }
+      //   })
+      // }
     }
 
 
