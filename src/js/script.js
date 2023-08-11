@@ -2,7 +2,7 @@
 
 // const { active } = require("browser-sync");
 
-{
+
   'use strict';
 
   const select = {
@@ -244,85 +244,65 @@
         //getElements(element) --> function into the methood
         thisWidget.element = element;
         thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
-        thisWidget.setValue(thisWidget.input.value);
+        // thisWidget.setValue(thisWidget.input.value);
         thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
         thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
         console.log('AmountWidget', this);
         console.log('contructor arg' + ' ' + 'Show HTML', element);
-        thisWidget.initWatchers;
+        thisWidget.setValue();
+        thisWidget.initWatchers();
 
       }
 
-      //set an order value
+      initWatchers() {
+        const thisWidget = this;
+
+        this.linkIncrease.addEventListener('click', () =>  {
+          const newValue = thisWidget.value + 1; // +1
+        })
+
+        this.linkDecrease.addEventListener('click', ()=> {
+          const newValue = thisWidget.value -1 // -1
+
+        })
+      }
+
+
       setValue(value){
         const thisWidget = this;
         const newValue = parseInt(value); //parseInt convert text to numbers
 
         /* [DONE] Add validation - check value and convert to number if needed */
-        if(thisWidget.value !== newValue && !isNaN(newValue)) {
+        if(thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin
+        ){
           thisWidget.value = newValue;
         }
 
         thisWidget.input.value = thisWidget.value;
       }
 
-      //   // class initAction(){
-      //   //   //add event reaction, enable  widget -+
-      //   //   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
 
-      //   //   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
-      //   //    console.log("###minus###");
-      //   //    );
-
-      //   //    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
-      //   //    console.log("###plus###");
-      //   //    );
-
-      //   // }
-
-
-    initWatchers(){
-      const thisWidget = this;
-
-      thisWidget.linkIncrease.addEventListener('click', () => {
-        thisWidget.setValue(thisWidget.value + 1)
-      });
-
-
-      thisWidget.linkDecrease.addEventListener('click', () => {
-        thisWidget.setValue(thisWidget.value - 1)
-      })
-
-      //what do I do here?
-      thisWidget.input.addEventListener('change', () => {
-        thisWidget.setValue(thisWidget.input.value);
-      });
-
-
-
-      // if (this.linkIncrease) {
-      //   this.linkIncrease.addEventListener('click', () => {
-      //     const newValue = thisWidget.value + 1; // +1
-
-      //     if (newValue <= settings.amountWidget.defaultMax) {
-      //       thisWidget.setValue(newValue);
-      //     }
-      //   })
-      // }
-
-
-      // if (this.linkDecrease) {
-      //   this.linkDecrease.addEventListener('click', () => {
-      //     console.log('linkDecrease')
-
-      //     const newValue = thisWidget.value - 1; // -1
-
-      //     if (newValue >= settings.amountWidget.defaultMin) {
-      //       thisWidget.setValue(newValue);
-      //     }
-      //   })
-      // }
     }
+
+      //set an order value
+
+
+      //   class initAction(){
+      //     //add event reaction, enable  widget -+
+      //     thisWidget.input.addEventListener('change', setValue(thisWidget.input));
+
+      //     thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
+      //      console.log("###minus###");
+      //      );
+
+      //      thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
+      //      console.log("###plus###");
+      //      );
+
+      //   }
+
+
+
 
 
     // class Cart {
@@ -385,5 +365,3 @@
       app.initMenu;
 
       app.init();
-
-  }
