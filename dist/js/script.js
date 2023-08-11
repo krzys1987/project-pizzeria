@@ -258,22 +258,30 @@
         const thisWidget = this;
 
         this.linkIncrease.addEventListener('click', () =>  {
-          const newValue = thisWidget.value + 1; // +1
+          thisWidget.setValue(thisWidget.value + 1); // +1
         })
 
-        this.linkDecrease.addEventListener('click', ()=> {
-          const newValue = thisWidget.value -1 // -1
+        this.linkDecrease.addEventListener('click', () => {
+          thisWidget.setValue(thisWidget.value -1); // -1
 
         })
+
+        this.input.addEventListener('change', () => {
+          thisWidget.setValue(thisWidget.input.value)
+        })
+
+
       }
-
 
       setValue(value){
         const thisWidget = this;
         const newValue = parseInt(value); //parseInt convert text to numbers
 
         /* [DONE] Add validation - check value and convert to number if needed */
-        if(thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin
+        if(thisWidget.value !== newValue &&
+          !isNaN(newValue) &&
+          newValue >= settings.amountWidget.defaultMax &&
+          newValue >= settings.amountWidget.defaultMin
         ){
           thisWidget.value = newValue;
         }
@@ -287,19 +295,19 @@
       //set an order value
 
 
-      //   class initAction(){
-      //     //add event reaction, enable  widget -+
-      //     thisWidget.input.addEventListener('change', setValue(thisWidget.input));
+        // class initAction(){
+        //   //add event reaction, enable  widget -+
+        //   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
 
-      //     thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
-      //      console.log("###minus###");
-      //      );
+        //   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
+        //    console.log("###minus###");
+        //    );
 
-      //      thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
-      //      console.log("###plus###");
-      //      );
+        //    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
+        //    console.log("###plus###");
+        //    );
 
-      //   }
+        // }
 
 
 

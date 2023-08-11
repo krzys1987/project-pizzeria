@@ -265,10 +265,13 @@ function () {
     value: function initWatchers() {
       var thisWidget = this;
       this.linkIncrease.addEventListener('click', function () {
-        var newValue = thisWidget.value + 1; // +1
+        thisWidget.setValue(thisWidget.value + 1); // +1
       });
       this.linkDecrease.addEventListener('click', function () {
-        var newValue = thisWidget.value - 1; // -1
+        thisWidget.setValue(thisWidget.value - 1); // -1
+      });
+      this.input.addEventListener('change', function () {
+        thisWidget.setValue(thisWidget.input.value);
       });
     }
   }, {
@@ -289,16 +292,16 @@ function () {
 
   return AmountWidget;
 }(); //set an order value
-//   class initAction(){
-//     //add event reaction, enable  widget -+
-//     thisWidget.input.addEventListener('change', setValue(thisWidget.input));
-//     thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
-//      console.log("###minus###");
-//      );
-//      thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
-//      console.log("###plus###");
-//      );
-//   }
+// class initAction(){
+//   //add event reaction, enable  widget -+
+//   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
+//   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
+//    console.log("###minus###");
+//    );
+//    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
+//    console.log("###plus###");
+//    );
+// }
 // class Cart {
 //   constructor(element){
 //     const thisCart = this;
