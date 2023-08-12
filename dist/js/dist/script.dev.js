@@ -206,7 +206,7 @@ function () {
       thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
       thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
 
-      thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, - . SelectAll might cause chose other product div
+      thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, - 
     }
   }, {
     key: "initAmountWidget",
