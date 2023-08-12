@@ -160,9 +160,11 @@ function () {
       var priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
       thisProduct.element.querySelector(select.menuProduct.priceElem).innerHTML = price;
       priceElem.innerHTML = price; //price operation: put chosen product value and transfer to HTML
-      // thisProduct.priceElem.innerHTML;
-      // thisProduct.priceElem.innerHTML = price;
-      //pick a value from thisProduct classes
+
+      thisProduct.priceElem.innerHTML; //multiply price amount
+
+      price *= thisProduct.amountWidget.value;
+      thisProduct.priceElem.innerHTML = price; //pick a value from thisProduct classes
       // const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
       //[DONE ALREADY] set a price variable
     }
@@ -206,7 +208,7 @@ function () {
       thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
       thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
 
-      thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, - 
+      thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, -
     }
   }, {
     key: "initAmountWidget",
@@ -214,6 +216,11 @@ function () {
       var thisProduct = this; //create a new instance and give it a reference to div with buttons: -, +
 
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+      thisProduct.amountWidgetElem(updated), function () {
+        thisProduct.amountWidgetElem, function () {
+          thisProduct.processOrder();
+        };
+      };
     }
   }, {
     key: "initAccordion",
@@ -246,21 +253,26 @@ function () {
   function AmountWidget(element) {
     _classCallCheck(this, AmountWidget);
 
-    var thisWidget = this; // thisWidget.getElements(element);
-    //getElements(element) --> function into the methood
+    var thisWidget = this; //getElements(element) --> function into the methood
 
-    thisWidget.element = element;
-    thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input); // thisWidget.setValue(thisWidget.input.value);
-
-    thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
-    thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
+    thisWidget.setValue(thisWidget.input.value);
     console.log('AmountWidget', this);
     console.log('contructor arguments:+', element);
-    thisWidget.setValue();
+    thisWidget.getElements(element);
+    thisWidget.setValue(value);
     thisWidget.initWatchers();
   }
 
   _createClass(AmountWidget, [{
+    key: "getElements",
+    value: function getElements(element) {
+      var thisWidget = this;
+      thisWidget.element = element;
+      thisWidget.input = thisWidget.element.querySelector(select.widgets.amount.input);
+      thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
+      thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
+    }
+  }, {
     key: "initWatchers",
     value: function initWatchers() {
       var thisWidget = this;
@@ -284,24 +296,22 @@ function () {
 
       if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin) {
         thisWidget.value = newValue;
+        this.announce;
       }
 
       thisWidget.input.value = thisWidget.value;
+    }
+  }, {
+    key: "announce",
+    value: function announce() {
+      var thisWidget = this;
+      var event = new Event('updated');
+      thisWidget.element.dispatchEvent(event);
     }
   }]);
 
   return AmountWidget;
 }(); //set an order value
-// class initAction(){
-//   //add event reaction, enable  widget -+
-//   thisWidget.input.addEventListener('change', setValue(thisWidget.input));
-//   thisWidget.linkDecrease.addEventListener('click', this.setValue(thisWidget.value -1) () =>
-//    console.log("###minus###");
-//    );
-//    thisWidget.linkIncrease.addEventListener('click', this.setValue(thisWidget.value +1) () =>
-//    console.log("###plus###");
-//    );
-// }
 // class Cart {
 //   constructor(element){
 //     const thisCart = this;
