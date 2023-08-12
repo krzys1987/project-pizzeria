@@ -255,7 +255,7 @@ function () {
     thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
     thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
     console.log('AmountWidget', this);
-    console.log('contructor arg' + ' ' + 'Show HTML', element);
+    console.log('contructor arguments:+', element);
     thisWidget.setValue();
     thisWidget.initWatchers();
   }
