@@ -311,23 +311,25 @@ function () {
   }]);
 
   return AmountWidget;
-}(); //set an order value
-// class Cart {
-//   constructor(element){
-//     const thisCart = this;
-//     thisCart.products = [];
-//     thisCart.getElements(element);
-//     console.log('thisCart', thisCart);
-//   }
-//   getElements(element){
-//     const thisCart = this;
-//     //create an object to hide dom properties inside aterwards
-//     thisCart.dom = {};
-//     thisCart.dom.wrapper = element;
-//   }
-// }
-//execute thisWidget.element --> add a product and change price by click + or -
-// AmountWidget.thisWidget.element;
+}();
+
+var Cart = function Cart(element) {
+  _classCallCheck(this, Cart);
+
+  var thisCart = this;
+  thisCart.products = [];
+  thisCart.getElements(element);
+  console.log('newCart', thisCart);
+};
+
+var CartProduct = function CartProduct() {
+  _classCallCheck(this, CartProduct);
+
+  var thisCart = this;
+  thisCart.dom = {};
+  thisCart.dom.wrapper = element;
+  console.log('CartProduct', CartProduct, 'thiisCart.dom.wrapper', element);
+}; // AmountWidget.thisWidget.element;
 
 
 var app = {
