@@ -294,10 +294,11 @@ function () {
 
       /* [DONE] Add validation - check value and convert to number if needed */
 
-      if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin) {
-        thisWidget.value = newValue;
-        this.announce;
-      }
+      if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin //potencial error
+      ) {
+          thisWidget.value = newValue;
+          this.announce;
+        }
 
       thisWidget.input.value = thisWidget.value;
     } //event call methood
