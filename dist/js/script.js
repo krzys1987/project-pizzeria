@@ -303,6 +303,7 @@
         thisWidget.input.value = thisWidget.value;
       }
 
+      //event call methood
       announce (){
         const thisWidget = this;
 

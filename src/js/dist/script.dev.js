@@ -300,7 +300,8 @@ function () {
       }
 
       thisWidget.input.value = thisWidget.value;
-    }
+    } //event call methood
+
   }, {
     key: "announce",
     value: function announce() {
