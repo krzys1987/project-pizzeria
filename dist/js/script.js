@@ -297,6 +297,7 @@
           newValue >= settings.amountWidget.defaultMin
         ){
           thisWidget.value = newValue;
+          //create an event
           this.announce;
         }
 

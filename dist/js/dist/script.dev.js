@@ -295,7 +295,8 @@ function () {
       /* [DONE] Add validation - check value and convert to number if needed */
 
       if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin) {
-        thisWidget.value = newValue;
+        thisWidget.value = newValue; //create an event
+
         this.announce;
       }
 
