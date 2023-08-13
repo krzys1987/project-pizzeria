@@ -309,43 +309,32 @@
         const event = new Event('updated');
         thisWidget.element.dispatchEvent(event);
 
-
       }
 
 
     }
 
-      //set an order value
+    class Cart {
+      constructor(element){
+        const thisCart = this;
 
+        thisCart.products = [];
+        thisCart.getElements(element);
 
+        console.log('newCart', thisCart);
 
+      }
+    }
 
+      class CartProduct {
+        constructor(){
+          const thisCart = this;
+          thisCart.dom = {};
+          thisCart.dom.wrapper = element
+          console.log('CartProduct', CartProduct, 'thiisCart.dom.wrapper', element)
+        }
+      }
 
-
-
-    // class Cart {
-    //   constructor(element){
-    //     const thisCart = this;
-
-    //     thisCart.products = [];
-    //     thisCart.getElements(element);
-
-    //     console.log('thisCart', thisCart);
-
-    //   }
-
-    //   getElements(element){
-    //     const thisCart = this;
-
-    //     //create an object to hide dom properties inside aterwards
-    //     thisCart.dom = {};
-
-    //     thisCart.dom.wrapper = element;
-
-    //   }
-
-    // }
-    //execute thisWidget.element --> add a product and change price by click + or -
     // AmountWidget.thisWidget.element;
 
     const app = {
