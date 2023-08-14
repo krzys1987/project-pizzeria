@@ -253,13 +253,11 @@ function () {
   function AmountWidget(element) {
     _classCallCheck(this, AmountWidget);
 
-    var thisWidget = this; //getElements(element) --> function into the methood
-
-    thisWidget.setValue(thisWidget.input.value);
+    var thisWidget = this;
     console.log('AmountWidget', this);
     console.log('contructor arguments:+', element);
     thisWidget.getElements(element);
-    thisWidget.setValue(value);
+    thisWidget.setValue(thisWidget.input.value);
     thisWidget.initWatchers();
   }
 
