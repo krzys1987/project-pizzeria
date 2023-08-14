@@ -352,7 +352,7 @@
           for(let productData in thisApp.data.products){ //loop iterates productData of all products
             new Product(productData, thisApp.data.products[productData]); //a new instance created, contains 2 argument: productData (object properties), thisApp.data.products[productData] (object values)
           }
-      },
+        },
 
         init: function(){
           const thisApp = this;
@@ -365,11 +365,18 @@
           this.initMenu();
         }
 
+        initCart: function(){
+          const thisApp = this;
+
+          const cartElem = document.querySelector(select.containerOf.cart);
+          thisApp.cart = new Cart(cartElem);
+        }
+
     };
 
       const thisApp = this;
       thisApp.data = dataSource;
       app.initData;
       app.initMenu;
-
+      app.initCart;
       app.init();

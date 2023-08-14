@@ -216,9 +216,11 @@ function () {
       var thisProduct = this; //create a new instance and give it a reference to div with buttons: -, +
 
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
-      thisProduct.amountWidgetElem(updated, function () {
-        thisProduct.processOrder;
-      });
+      thisProduct.amountWidgetElem(updated), function () {
+        thisProduct.amountWidgetElem, function () {
+          thisProduct.processOrder();
+        };
+      };
     }
   }, {
     key: "initAccordion",
@@ -292,11 +294,11 @@ function () {
 
       /* [DONE] Add validation - check value and convert to number if needed */
 
-      if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin) {
-        thisWidget.value = newValue; //create an event
-
-        this.announce;
-      }
+      if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin //potencial error
+      ) {
+          thisWidget.value = newValue;
+          this.announce;
+        }
 
       thisWidget.input.value = thisWidget.value;
     } //event call methood
