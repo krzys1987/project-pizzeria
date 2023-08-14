@@ -363,7 +363,7 @@
           console.log('templates:', templates);
           this.initData();
           this.initMenu();
-        }
+        },
 
         initCart: function(){
           const thisApp = this;

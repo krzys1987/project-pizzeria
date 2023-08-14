@@ -358,10 +358,16 @@ var app = {
     console.log('templates:', templates);
     this.initData();
     this.initMenu();
+  },
+  initCart: function initCart() {
+    var thisApp = this;
+    var cartElem = document.querySelector(select.containerOf.cart);
+    thisApp.cart = new Cart(cartElem);
   }
 };
 var thisApp = void 0;
 thisApp.data = dataSource;
 app.initData;
 app.initMenu;
+app.initCart;
 app.init();
