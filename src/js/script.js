@@ -206,13 +206,9 @@
         const thisProduct = this;
         //create a new instance and give it a reference to div with buttons: -, +
         thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
-        // (thisProduct.amountWidgetElem(updated), function() {
-        //   (thisProduct.amountWidgetElem, function(){
-        //     thisProduct.processOrder();
-        //   });
-        // });
-
-
+        thisProduct.amountWidgetElem.addEventListener('update', () => {
+          thisProduct.processOrder()
+        });
       }
 
 

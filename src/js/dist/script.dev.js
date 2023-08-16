@@ -213,11 +213,10 @@ function () {
     value: function initAmountWidget() {
       var thisProduct = this; //create a new instance and give it a reference to div with buttons: -, +
 
-      thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); // (thisProduct.amountWidgetElem(updated), function() {
-      //   (thisProduct.amountWidgetElem, function(){
-      //     thisProduct.processOrder();
-      //   });
-      // });
+      thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+      thisProduct.amountWidgetElem.addEventListener('update', function () {
+        thisProduct.processOrder();
+      });
     }
   }, {
     key: "initAccordion",
