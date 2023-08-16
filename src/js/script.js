@@ -147,7 +147,7 @@
         thisProduct.element.querySelector(select.menuProduct.priceElem).innerHTML = price;
 
         //price operation: put chosen product value and transfer to HTML
-        thisProduct.priceElem.innerHTML;
+        priceElem.innerHTML;
 
         //multiply price amount
         price *= thisProduct.amountWidget.value;
