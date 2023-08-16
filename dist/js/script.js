@@ -242,7 +242,7 @@
         console.log('AmountWidget', this);
         console.log('contructor arguments:+', element);
         thisWidget.getElements(element);
-        thisWidget.setValue(thisWidget.input.value);
+        thisWidget.setValue(thisWidget.input.value || settings.amountWidget.defaultValue);
         thisWidget.initWatchers();
       }
 
@@ -284,7 +284,7 @@
           newValue >= settings.amountWidget.defaultMin
         ){
           thisWidget.value = newValue;
-          this.announce;
+          this.announce();
         }
 
         thisWidget.input.value = thisWidget.value;

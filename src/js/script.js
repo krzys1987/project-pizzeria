@@ -242,7 +242,7 @@
         console.log('AmountWidget', this);
         console.log('contructor arguments:+', element);
         thisWidget.getElements(element);
-        thisWidget.setValue(thisWidget.input.value);
+        thisWidget.setValue(thisWidget.input.value || settings.amountWidget.defaultValue);
         thisWidget.initWatchers();
       }
 
