@@ -144,9 +144,7 @@
 
         //show the product value
         const priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
-
         thisProduct.element.querySelector(select.menuProduct.priceElem).innerHTML = price;
-        priceElem.innerHTML = price;
 
         //price operation: put chosen product value and transfer to HTML
         thisProduct.priceElem.innerHTML;
