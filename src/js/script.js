@@ -284,7 +284,7 @@
           newValue >= settings.amountWidget.defaultMin
         ){
           thisWidget.value = newValue;
-          this.announce;
+          this.announce();
         }
 
         thisWidget.input.value = thisWidget.value;

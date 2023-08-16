@@ -290,7 +290,7 @@ function () {
 
       if (thisWidget.value !== newValue && !isNaN(newValue) && newValue <= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin) {
         thisWidget.value = newValue;
-        this.announce;
+        this.announce();
       }
 
       thisWidget.input.value = thisWidget.value;
