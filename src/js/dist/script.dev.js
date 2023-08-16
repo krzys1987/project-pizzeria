@@ -164,9 +164,7 @@ function () {
       thisProduct.priceElem.innerHTML; //multiply price amount
 
       price *= thisProduct.amountWidget.value;
-      thisProduct.priceElem.innerHTML = price; //pick a value from thisProduct classes
-      // const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
-      //[DONE ALREADY] set a price variable
+      thisProduct.priceElem.innerHTML = price; //[DONE ALREADY] set a price variable
     }
   }, {
     key: "renderInMenu",
@@ -215,12 +213,11 @@ function () {
     value: function initAmountWidget() {
       var thisProduct = this; //create a new instance and give it a reference to div with buttons: -, +
 
-      thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
-      thisProduct.amountWidgetElem(updated), function () {
-        thisProduct.amountWidgetElem, function () {
-          thisProduct.processOrder();
-        };
-      };
+      thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem); // (thisProduct.amountWidgetElem(updated), function() {
+      //   (thisProduct.amountWidgetElem, function(){
+      //     thisProduct.processOrder();
+      //   });
+      // });
     }
   }, {
     key: "initAccordion",
@@ -253,13 +250,11 @@ function () {
   function AmountWidget(element) {
     _classCallCheck(this, AmountWidget);
 
-    var thisWidget = this; //getElements(element) --> function into the methood
-
-    thisWidget.setValue(thisWidget.input.value);
+    var thisWidget = this;
     console.log('AmountWidget', this);
     console.log('contructor arguments:+', element);
     thisWidget.getElements(element);
-    thisWidget.setValue(value);
+    thisWidget.setValue(thisWidget.input.value);
     thisWidget.initWatchers();
   }
 
@@ -358,10 +353,16 @@ var app = {
     console.log('templates:', templates);
     this.initData();
     this.initMenu();
-  }
+  } // initCart: function(){
+  //   const thisApp = this;
+  //   const cartElem = document.querySelector(select.containerOf.cart);
+  //   thisApp.cart = new Cart(cartElem);
+  // }
+
 };
 var thisApp = void 0;
 thisApp.data = dataSource;
 app.initData;
 app.initMenu;
+app.initCart;
 app.init();

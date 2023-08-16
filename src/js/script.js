@@ -156,9 +156,6 @@
 
         thisProduct.priceElem.innerHTML = price;
 
-        //pick a value from thisProduct classes
-        // const yourChosenproducts = thisProduct.element.querySelector(select.menuProduct.priceElem);
-
         //[DONE ALREADY] set a price variable
 
       }
@@ -212,11 +209,11 @@
         const thisProduct = this;
         //create a new instance and give it a reference to div with buttons: -, +
         thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
-        (thisProduct.amountWidgetElem(updated), function() {
-          (thisProduct.amountWidgetElem, function(){
-            thisProduct.processOrder();
-          });
-        });
+        // (thisProduct.amountWidgetElem(updated), function() {
+        //   (thisProduct.amountWidgetElem, function(){
+        //     thisProduct.processOrder();
+        //   });
+        // });
 
 
       }
@@ -249,14 +246,11 @@
     class AmountWidget {
       constructor(element){
         const thisWidget = this;
-        //getElements(element) --> function into the methood
-        thisWidget.setValue(thisWidget.input.value);
         console.log('AmountWidget', this);
         console.log('contructor arguments:+', element);
         thisWidget.getElements(element);
-        thisWidget.setValue(value);
+        thisWidget.setValue(thisWidget.input.value);
         thisWidget.initWatchers();
-
       }
 
       getElements(element){
@@ -365,18 +359,18 @@
           this.initMenu();
         }
 
-        initCart: function(){
-          const thisApp = this;
+        // initCart: function(){
+        //   const thisApp = this;
 
-          const cartElem = document.querySelector(select.containerOf.cart);
-          thisApp.cart = new Cart(cartElem);
-        }
+        //   const cartElem = document.querySelector(select.containerOf.cart);
+        //   thisApp.cart = new Cart(cartElem);
+        // }
 
     };
 
-      const thisApp = this;
-      thisApp.data = dataSource;
-      app.initData;
-      app.initMenu;
-      app.initCart;
-      app.init();
+    const thisApp = this;
+    thisApp.data = dataSource;
+    app.initData;
+    app.initMenu;
+    app.initCart;
+    app.init();
