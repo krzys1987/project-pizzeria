@@ -288,11 +288,10 @@ function () {
 
       /* [DONE] Add validation - check value and convert to number if needed */
 
-      if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin //potencial error
-      ) {
-          thisWidget.value = newValue;
-          this.announce;
-        }
+      if (thisWidget.value !== newValue && !isNaN(newValue) && newValue <= settings.amountWidget.defaultMax && newValue >= settings.amountWidget.defaultMin) {
+        thisWidget.value = newValue;
+        this.announce;
+      }
 
       thisWidget.input.value = thisWidget.value;
     } //event call methood
@@ -325,8 +324,7 @@ var CartProduct = function CartProduct() {
   thisCart.dom = {};
   thisCart.dom.wrapper = element;
   console.log('CartProduct', CartProduct, 'thiisCart.dom.wrapper', element);
-}; // AmountWidget.thisWidget.element;
-
+};
 
 var app = {
   initData: function initData() {
