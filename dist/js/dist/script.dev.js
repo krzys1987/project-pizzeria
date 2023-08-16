@@ -163,8 +163,9 @@ function () {
 
       thisProduct.priceElem.innerHTML; //multiply price amount
 
-      price *= thisProduct.amountWidget.value;
-      thisProduct.priceElem.innerHTML = price; //[DONE ALREADY] set a price variable
+      price *= thisProduct.amountWidget.value; //[DONE ALREADY] set a price variable
+
+      priceElem.innerHTML = price;
     }
   }, {
     key: "renderInMenu",

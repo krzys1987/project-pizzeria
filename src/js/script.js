@@ -154,9 +154,8 @@
         //multiply price amount
         price *= thisProduct.amountWidget.value;
 
-        thisProduct.priceElem.innerHTML = price;
-
         //[DONE ALREADY] set a price variable
+        priceElem.innerHTML = price;
 
       }
 
