@@ -255,6 +255,8 @@ function () {
     thisWidget.getElements(element);
     thisWidget.setValue(thisWidget.input.value || settings.amountWidget.defaultValue);
     thisWidget.initWatchers();
+    this.Cart;
+    this.CartProduct;
   }
 
   _createClass(AmountWidget, [{
