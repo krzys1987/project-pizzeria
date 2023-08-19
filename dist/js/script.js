@@ -366,4 +366,5 @@
     app.initData;
     app.initMenu;
     app.initCart;
+    app.cart;
     app.init();
