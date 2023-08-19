@@ -61,6 +61,7 @@
         this.data = data;
         this.renderInMenu(); //function set properties of thisProduct.element
         this.getElements();
+        this.initAction();
         this.initAccordion();
         this.initOrderForm();
         this.initAmountWidget();
@@ -199,6 +200,7 @@
         thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.price);
         thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
         thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, -
+        thisCart.dom.toggleTrigger = thisCart.dom.wrapper(select.cart.toggleTrigger);
       }
 
 
@@ -298,6 +300,15 @@
 
         const event = new Event('updated');
         thisWidget.element.dispatchEvent(event);
+
+      }
+
+      initAction(){
+        thisCart = this;
+
+        thisCart.dom.toggleTrigger.addEventListener('click', () =>
+        thisCart.dom.toggleTrigger.classList.toggle('active'));
+
 
       }
 

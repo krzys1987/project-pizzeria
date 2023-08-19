@@ -67,6 +67,7 @@ function () {
     this.renderInMenu(); //function set properties of thisProduct.element
 
     this.getElements();
+    this.initAction();
     this.initAccordion();
     this.initOrderForm();
     this.initAmountWidget();
@@ -207,6 +208,8 @@ function () {
       thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
 
       thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, -
+
+      thisCart.dom.toggleTrigger = thisCart.dom.wrapper(select.cart.toggleTrigger);
     }
   }, {
     key: "initAmountWidget",
@@ -304,6 +307,14 @@ function () {
       var thisWidget = this;
       var event = new Event('updated');
       thisWidget.element.dispatchEvent(event);
+    }
+  }, {
+    key: "initAction",
+    value: function initAction() {
+      thisCart = this;
+      thisCart.dom.toggleTrigger.addEventListener('click', function () {
+        return thisCart.dom.toggleTrigger.classList.toggle('active');
+      });
     }
   }]);
 
