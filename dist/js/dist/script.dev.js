@@ -364,4 +364,5 @@ thisApp.data = dataSource;
 app.initData;
 app.initMenu;
 app.initCart;
+app.cart;
 app.init();
