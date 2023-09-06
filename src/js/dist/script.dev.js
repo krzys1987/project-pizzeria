@@ -321,14 +321,29 @@ function () {
   return AmountWidget;
 }();
 
-var Cart = function Cart(element) {
-  _classCallCheck(this, Cart);
+var Cart =
+/*#__PURE__*/
+function () {
+  function Cart(element) {
+    _classCallCheck(this, Cart);
 
-  var thisCart = this;
-  thisCart.products = [];
-  thisCart.getElements(element);
-  console.log('newCart', thisCart);
-};
+    var thisCart = this;
+    thisCart.products = [];
+    thisCart.getElements(element);
+    console.log('newCart', thisCart);
+  }
+
+  _createClass(Cart, [{
+    key: "getElements",
+    value: function getElements(element) {
+      var thisCart = this;
+      thisCart.dom = {};
+      thisCart.dom.wrapper = element;
+    }
+  }]);
+
+  return Cart;
+}();
 
 var CartProduct = function CartProduct() {
   _classCallCheck(this, CartProduct);

@@ -325,6 +325,13 @@
         console.log('newCart', thisCart);
 
       }
+
+      getElements(element){
+        const thisCart = this;
+        thisCart.dom = {};
+        thisCart.dom.wrapper = element;
+
+      }
     }
 
       class CartProduct {
