@@ -367,6 +367,7 @@
           console.log('templates:', templates);
           this.initData();
           this.initMenu();
+          this.initCart();
         },
 
         initCart: function(){
