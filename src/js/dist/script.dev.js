@@ -344,13 +344,12 @@ function () {
   return Cart;
 }();
 
-var CartProduct = function CartProduct() {
-  _classCallCheck(this, CartProduct);
+var CartProduct = function CartProduct() {// const thisCart = this;
+  // thisCart.dom = {};
+  // thisCart.dom.wrapper = element
+  // console.log('CartProduct', CartProduct, 'thisCart.dom.wrapper', element)
 
-  var thisCart = this;
-  thisCart.dom = {};
-  thisCart.dom.wrapper = element;
-  console.log('CartProduct', CartProduct, 'thiisCart.dom.wrapper', element);
+  _classCallCheck(this, CartProduct);
 };
 
 var app = {
@@ -377,12 +376,12 @@ var app = {
     console.log('templates:', templates);
     this.initData();
     this.initMenu();
-  } // initCart: function(){
-  //   const thisApp = this;
-  //   const cartElem = document.querySelector(select.containerOf.cart);
-  //   thisApp.cart = new Cart(cartElem);
-  // }
-
+  },
+  initCart: function initCart() {
+    var thisApp = this;
+    var cartElem = document.querySelector(select.containerOf.cart);
+    thisApp.cart = new Cart(cartElem);
+  }
 };
 var thisApp = void 0;
 thisApp.data = dataSource;

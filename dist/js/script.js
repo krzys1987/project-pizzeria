@@ -369,14 +369,14 @@
           console.log('templates:', templates);
           this.initData();
           this.initMenu();
-        }
+        },
 
         initCart: function(){
           const thisApp = this;
 
           const cartElem = document.querySelector(select.containerOf.cart);
           thisApp.cart = new Cart(cartElem);
-        }
+        },
 
     };
 
