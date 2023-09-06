@@ -61,7 +61,6 @@
         this.data = data;
         this.renderInMenu(); //function set properties of thisProduct.element
         this.getElements();
-        this.initAction();
         this.initAccordion();
         this.initOrderForm();
         this.initAmountWidget();
@@ -302,26 +301,25 @@
 
       }
 
+    }
+
+    class Cart {
+      constructor(element){
+        const thisCart = this;
+        this.initAction();
+        thisCart.products = [];
+        thisCart.getElements(element);
+
+        console.log('newCart', thisCart);
+
+      }
+
       initAction(){
         thisCart = this;
 
         thisCart.dom.toggleTrigger.addEventListener('click', () =>
         thisCart.dom.toggleTrigger.classList.toggle('active'));
 
-
-      }
-
-
-    }
-
-    class Cart {
-      constructor(element){
-        const thisCart = this;
-
-        thisCart.products = [];
-        thisCart.getElements(element);
-
-        console.log('newCart', thisCart);
 
       }
 

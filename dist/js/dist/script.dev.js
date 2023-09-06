@@ -67,7 +67,6 @@ function () {
     this.renderInMenu(); //function set properties of thisProduct.element
 
     this.getElements();
-    this.initAction();
     this.initAccordion();
     this.initOrderForm();
     this.initAmountWidget();
@@ -306,14 +305,6 @@ function () {
       var event = new Event('updated');
       thisWidget.element.dispatchEvent(event);
     }
-  }, {
-    key: "initAction",
-    value: function initAction() {
-      thisCart = this;
-      thisCart.dom.toggleTrigger.addEventListener('click', function () {
-        return thisCart.dom.toggleTrigger.classList.toggle('active');
-      });
-    }
   }]);
 
   return AmountWidget;
@@ -326,12 +317,21 @@ function () {
     _classCallCheck(this, Cart);
 
     var thisCart = this;
+    this.initAction();
     thisCart.products = [];
     thisCart.getElements(element);
     console.log('newCart', thisCart);
   }
 
   _createClass(Cart, [{
+    key: "initAction",
+    value: function initAction() {
+      thisCart = this;
+      thisCart.dom.toggleTrigger.addEventListener('click', function () {
+        return thisCart.dom.toggleTrigger.classList.toggle('active');
+      });
+    }
+  }, {
     key: "getElements",
     value: function getElements(element) {
       var thisCart = this;
