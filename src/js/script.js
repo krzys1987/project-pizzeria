@@ -337,10 +337,10 @@
 
       class CartProduct {
         constructor(){
-          const thisCart = this;
-          thisCart.dom = {};
-          thisCart.dom.wrapper = element
-          console.log('CartProduct', CartProduct, 'thiisCart.dom.wrapper', element)
+          // const thisCart = this;
+          // thisCart.dom = {};
+          // thisCart.dom.wrapper = element
+          // console.log('CartProduct', CartProduct, 'thisCart.dom.wrapper', element)
         }
       }
 
@@ -371,12 +371,12 @@
           this.initMenu();
         }
 
-        // initCart: function(){
-        //   const thisApp = this;
+        initCart: function(){
+          const thisApp = this;
 
-        //   const cartElem = document.querySelector(select.containerOf.cart);
-        //   thisApp.cart = new Cart(cartElem);
-        // }
+          const cartElem = document.querySelector(select.containerOf.cart);
+          thisApp.cart = new Cart(cartElem);
+        }
 
     };
 

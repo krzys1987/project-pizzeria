@@ -208,8 +208,6 @@ function () {
       thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper); // 'product__images'
 
       thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget); //add div with bottoms +, -
-
-      thisCart.dom.toggleTrigger = thisCart.dom.wrapper(select.cart.toggleTrigger);
     }
   }, {
     key: "initAmountWidget",
@@ -339,6 +337,7 @@ function () {
       var thisCart = this;
       thisCart.dom = {};
       thisCart.dom.wrapper = element;
+      thisCart.dom.toggleTrigger = thisCart.dom.wrapper(select.cart.toggleTrigger);
     }
   }]);
 
