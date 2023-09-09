@@ -326,10 +326,8 @@ function () {
   _createClass(Cart, [{
     key: "initAction",
     value: function initAction() {
-      var thisCart = this;
-      thisCart.dom.toggleTrigger.addEventListener('click', function () {
-        return thisCart.dom.toggleTrigger.classList.toggle('active');
-      });
+      var thisCart = this; // thisCart.dom.toggleTrigger.addEventListener('click', () =>
+      // thisCart.dom.toggleTrigger.classList.toggle('active'));
     }
   }, {
     key: "getElements",
@@ -342,15 +340,15 @@ function () {
   }]);
 
   return Cart;
-}();
+}(); // class CartProduct {
+//   constructor(){
+//     // const thisCart = this;
+//     // thisCart.dom = {};
+//     // thisCart.dom.wrapper = element
+//     // console.log('CartProduct', CartProduct, 'thisCart.dom.wrapper', element)
+//   }
+// }
 
-var CartProduct = function CartProduct() {// const thisCart = this;
-  // thisCart.dom = {};
-  // thisCart.dom.wrapper = element
-  // console.log('CartProduct', CartProduct, 'thisCart.dom.wrapper', element)
-
-  _classCallCheck(this, CartProduct);
-};
 
 var app = {
   initData: function initData() {
@@ -388,6 +386,6 @@ var thisApp = void 0;
 thisApp.data = dataSource;
 app.initData;
 app.initMenu;
-app.initCart;
 app.cart;
 app.init();
+app.initCart;

@@ -315,8 +315,8 @@
 
       initAction(){
         const thisCart = this;
-        thisCart.dom.toggleTrigger.addEventListener('click', () =>
-        thisCart.dom.toggleTrigger.classList.toggle('active'));
+        // thisCart.dom.toggleTrigger.addEventListener('click', () =>
+        // thisCart.dom.toggleTrigger.classList.toggle('active'));
 
 
       }
@@ -329,14 +329,14 @@
       }
     }
 
-      class CartProduct {
-        constructor(){
-          // const thisCart = this;
-          // thisCart.dom = {};
-          // thisCart.dom.wrapper = element
-          // console.log('CartProduct', CartProduct, 'thisCart.dom.wrapper', element)
-        }
-      }
+      // class CartProduct {
+      //   constructor(){
+      //     // const thisCart = this;
+      //     // thisCart.dom = {};
+      //     // thisCart.dom.wrapper = element
+      //     // console.log('CartProduct', CartProduct, 'thisCart.dom.wrapper', element)
+      //   }
+      // }
 
     const app = {
 
@@ -378,6 +378,6 @@
     thisApp.data = dataSource;
     app.initData;
     app.initMenu;
-    app.initCart;
     app.cart;
     app.init();
+    app.initCart;
