@@ -309,14 +309,12 @@
         this.initAction();
         thisCart.products = [];
         thisCart.getElements(element);
-
         console.log('newCart', thisCart);
 
       }
 
       initAction(){
         const thisCart = this;
-
         thisCart.dom.toggleTrigger.addEventListener('click', () =>
         thisCart.dom.toggleTrigger.classList.toggle('active'));
 
@@ -328,8 +326,6 @@
         thisCart.dom = {};
         thisCart.dom.wrapper = element;
         thisCart.dom.toggleTrigger = thisCart.dom.wrapper(select.cart.toggleTrigger);
-
-
       }
     }
 
@@ -372,7 +368,6 @@
 
         initCart: function(){
           const thisApp = this;
-
           const cartElem = document.querySelector(select.containerOf.cart);
           thisApp.cart = new Cart(cartElem);
         },
