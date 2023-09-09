@@ -306,9 +306,9 @@
     class Cart {
       constructor(element){
         const thisCart = this;
-        this.initAction();
         thisCart.products = [];
         thisCart.getElements(element);
+        thisCart.initAction();
         console.log('newCart', thisCart);
 
       }

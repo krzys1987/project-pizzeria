@@ -317,9 +317,9 @@ function () {
     _classCallCheck(this, Cart);
 
     var thisCart = this;
-    this.initAction();
     thisCart.products = [];
     thisCart.getElements(element);
+    thisCart.initAction();
     console.log('newCart', thisCart);
   }
 
