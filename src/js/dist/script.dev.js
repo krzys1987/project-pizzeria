@@ -326,7 +326,7 @@ function () {
   _createClass(Cart, [{
     key: "initAction",
     value: function initAction() {
-      thisCart = this;
+      var thisCart = this;
       thisCart.dom.toggleTrigger.addEventListener('click', function () {
         return thisCart.dom.toggleTrigger.classList.toggle('active');
       });
