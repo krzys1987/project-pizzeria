@@ -363,8 +363,7 @@ function () {
   _createClass(Cart, [{
     key: "initAction",
     value: function initAction() {
-      var thisCart = this; // thisCart.dom.toggleTrigger.addEventListener('click', () =>
-      // thisCart.dom.toggleTrigger.classList.toggle('active'));
+      var thisCart = this;
     }
   }, {
     key: "getElements",
