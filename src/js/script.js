@@ -349,7 +349,9 @@
 
       initAction(){
         const thisCart = this;
-
+        thisCart.dom.toggleTrigger.addEventListener('click', () => {
+          thisCart.dom.wrapper.toggle(thisCart.dom.wrapperActive)
+        })
       }
 
       getElements(element){

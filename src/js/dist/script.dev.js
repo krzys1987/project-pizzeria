@@ -364,6 +364,9 @@ function () {
     key: "initAction",
     value: function initAction() {
       var thisCart = this;
+      thisCart.dom.toggleTrigger.addEventListener('click', function () {
+        thisCart.dom.wrapper.toggle(thisCart.dom.wrapperActive);
+      });
     }
   }, {
     key: "getElements",
